@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Collapse style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Collapse [무너지다] : 평소에는 숨어 있다가 버튼같은 액션이 발생하면 내용물이 보여지는 효과 -->        
+        <div class="container mt-3">
+
+            <!-- 기본적은 Collapse 스타일 -->
+            <!-- 1. 보여졌다/숨겼다를 토글링 해주는 버튼 -->
+            <!-- dropdown수업때 처럼 data-toggle속성으로 어떤 것을 토글링할지 지정, data-target속성으로 토글링할 대상 지정 -->
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#aa">button</button>
+            <!-- 2. 위 버튼에 의해 hide/show되는 내용물 -->
+            <!-- .collapse를 추가하면 기본적으로 안보임 -->
+            <!-- 위 버튼에서 이 콘텐츠를 식별할 수 있도록 id속성 부여 -->
+            <div class="collapse" id="aa">
+                This is collapsed Content.
+            </div>
+            <hr>
+
+            <!-- <a>요소로 토글버튼을 만들면 data-target속성대신에 href속성으로 대상을 지정해도 됨 -->
+            <a href="#bb" class="btn btn-primary" data-toggle="collapse">toggle</a>
+            <div class="collapse" id="bb">
+                This is collapsed Content.
+                <img src="./images/moana01.jpg" alt="moana01" width="150px">
+            </div>
+            <hr>
+
+            <!-- 디폴트로 열려있는 상태로 시작할 수 있음. -->
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#cc">button</button>
+            <!-- 이 내용물에 .show추가 -->
+            <div class="collapse show" id="cc">
+                This is collapsed Content.
+            </div>
+            <hr>
+
+        </div>  
+        <hr>
+        
+        <!-- Accordion : 아주 유명한 구조의 collapse -->
+        <!-- collapse의 그룹핑이라고 보면 됨 -->
+        <div class="container">
+
+            <!-- 하나의 그룹으로 -->
+            <div>
+                <!-- 아코디언의 항목 #1 -->
+                <div class="card">
+                    <!-- 헤더가 collapse의 토글버튼 역할을 해야 해서 <a>요소 삽입 [ 마우스hover시에 언더바가 싫으면... <a>요소에.card-link추가-->
+                    <div class="card-header"><a href="#d1" data-toggle="collapse" class="card-link">Item 1</a></div>
+
+                    <!-- card-body를 숨겨놓기 [.collapse  / id지정]-->
+                    <div class="card-body collapse" id="d1">
+                        <h5 class="card-title">item 1</h5>
+                        <p class="card-text">this is item 1</p>
+                    </div>
+                </div>
+
+                <!-- 아코디언의 항목 #2 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d2" data-toggle="collapse" class="card-link">Item 2</a></div>
+                    <div class="card-body collapse" id="d2">
+                        <h5 class="card-title">item 2</h5>
+                        <p class="card-text">this is item 2</p>
+                    </div>
+                </div>
+
+                <!-- 아코디언의 항목 #3 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d3" data-toggle="collapse" class="card-link">Item 3</a></div>
+                    <div class="card-body collapse" id="d3">
+                        <h5 class="card-title">item 3</h5>
+                        <p class="card-text">this is item 3</p>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+            <!-- 아코디언 항목들 중 하나를 열면 열려있던 항목이 자동으로 닫히도록... -->
+            <!-- 방법. collapse되는 콘텐츠에 data-parent속성을 통해 아코디언 그룹의 식별자를 지정! -->
+            <!-- 하나의 그룹으로 .accordion을 주면 항목들이 하나의 그룹으로 묶임-->
+            <div id="group" class="accordion">
+                <!-- 아코디언의 항목 #1 -->
+                <div class="card">
+                    <!-- 헤더가 collapse의 토글버튼 역할을 해야 해서 <a>요소 삽입 [ 마우스hover시에 언더바가 싫으면... <a>요소에.card-link추가-->
+                    <div class="card-header"><a href="#d4" data-toggle="collapse" class="card-link">Item 1</a></div>
+
+                    <!-- card-body를 숨겨놓기 [.collapse  / id지정]-->
+                    <div class="card-body collapse show" id="d4" data-parent="#group">
+                        <h5 class="card-title">item 1</h5>
+                        <p class="card-text">this is item 1</p>
+                    </div>
+                </div>
+
+                <!-- 아코디언의 항목 #2 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d5" data-toggle="collapse" class="card-link">Item 2</a></div>
+                    <div class="card-body collapse" id="d5" data-parent="#group">
+                        <label for="">message : </label>                        
+                        <input type="text" placeholder="input text" class="form-control">
+                        <!-- .form-control을 주면 부트스트랩스타일의 인풋상자 스타일링.[뒤에 배움] -->
+                    </div>
+                </div>
+
+                <!-- 아코디언의 항목 #3 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d6" data-toggle="collapse" class="card-link">Item 3</a></div>
+                    <div class="card-body collapse" id="d6" data-parent="#group">
+                        <img src="./images/moana01.jpg" alt="moana01">
+                        <h4>MOANA 1</h4>
+                        <p>Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+
+            </div>
+            <hr>
+
+
+        </div>
+
+    </body>
+
+</html>

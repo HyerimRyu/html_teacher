@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Popup style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>       
+       
+    </head>
+
+    <body>
+
+        <!-- Tooltip -->
+        <div class="container mt-3">
+
+            <!-- title속성의 값이 툴팁에서 보여질 글씨 -->
+            <a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>
+            <!-- 툴팁을 토글링 하려면 반드시 jquery코드가 있어야함  -->
+            <script>
+                $(document).ready(function(){
+                    $('[data-toggle="tooltip"]').tooltip(); 
+                });
+            </script>
+            <hr>
+
+            <!-- data-placement속성으로 툴팁위치지정 가능 -->
+            <a href="#" data-toggle="tooltip" title="Hooray!" data-placement="right">Hover over me</a>
+            
+        </div>
+        <hr>
+
+        <!-- Popover : 툴팁보다 좀더 모양 꾸미기 가능-->
+        <div class="container">
+
+            <!-- title속성의 값이 툴팁에서 보여질 글씨 -->
+            <a href="#" data-toggle="popover" title="popover title" data-content="some content inside the popover" class="btn btn-primary">Toggle popover</a>
+            <!-- 팝오버를 토글링 하려면 반드시 jquery코드가 있어야함  -->
+            <script>
+                $(document).ready(function(){
+                    $('[data-toggle="popover"]').popover(); 
+                });
+            </script>
+            <hr>
+
+            <!-- data-placement속성으로 툴팁위치지정 가능 -->
+            <a href="#" data-toggle="popover" title="popover title" data-content="some content inside the popover" class="btn btn-primary" data-placement="bottom">Toggle popover</a>
+            <hr>
+
+
+            <!-- 화면의 아무곳이나 클릭하였을 때 팝오버창 닫기 [ data-trigger="focus" ]-->
+            <a href="#" data-toggle="popover" title="popover title" data-content="some content inside the popover" class="btn btn-primary" data-placement="bottom" data-trigger="focus">Toggle popover</a>
+            <hr>
+
+            <!-- 툴팁처럼 hover되었을 때 하고 싶다면 [ data-trigger="hover" ]-->
+            <a href="#" data-toggle="popover" title="popover title" data-content="some content inside the popover" class="btn btn-primary" data-placement="bottom" data-trigger="hover">Toggle popover</a>
+            
+        </div>
+        <hr>
+
+
+        <!-- Toas 띄우기 -->
+        <div class="container"> 
+
+            <button class="btn btn-success" id="btn">show toast</button>
+
+            <!-- 토스트의 모양 만들기 [ 처음시작할 때 이미 공간을 차지하고 있음.. 이 것이 없어지지 않음...테스트 필요 -->
+            <!-- 기본 delay는 500 -->
+            <div class="toast" id="aa" data-delay="3000">
+                <div class="toast-header">
+                    Toast Header
+                </div>
+                <div class="toast-body">
+                    Some text inside the toast body
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $('#aa').toast('dispose');
+                });
+                $('#btn').click( function(){                    
+                    $('#aa').toast('show'); 
+                });
+            </script>
+            <hr>
+
+            <!-- 토스트가 자동 종료되는 것을 막을 수 있음. -->
+            <button class="btn btn-success" id="btn2">show toast</button>
+
+            <!-- 토스트의 모양 만들기 -->
+            <div class="toast" id="bb" data-autohide="false">
+                <div class="toast-header">                    
+                    <strong class="mr-auto text-primary">Toast Header</strong>
+                    <button type="button" class="close mb-1" data-dismiss="toast">&times;</button>
+                </div>
+                <div class="toast-body">
+                    Some text inside the toast body
+                </div>
+            </div>
+
+            <script>
+                $('#btn2').click( function(){                    
+                    $('#bb').toast('show'); 
+                });
+            </script>
+            <hr>
+
+        </div>
+        
+    </body>
+
+</html>

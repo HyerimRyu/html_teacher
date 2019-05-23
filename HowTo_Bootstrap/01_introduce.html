@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title>Bootstrap EX1</title>
+
+        <!-- Bootstrap을 사용하는 방법은 JQuery와 거의 같음. -->
+        <!-- Bootstrap라이브러리의 CSS와 JS문서를 이 문서에 삽입 -->
+
+        <!-- Bootstrap 사이트 : https://getbootstrap.com/ -->
+        <!-- 기본적으로 추가할 문서는 3개 -->
+        <!-- 1. 부트스트랩의 css문서 [ bootstrap.css ]                : 이 문서안에 많은 css코드가 클래스선택자를 통해 작성되어 있음, 원하는 css코드의 클래스를 html요소에 설정하면 스타일 적용됨 -->
+        <!-- 2. jQuery 라이브러리 [ jquery.js ]                       : 부트스트랩의 기능들이 jquery를 기반으로 작성되었기에 반드시 jquery가 문서에 포함되어 있어야함. -->
+        <!-- 3. 부트스트랩의 여러기능들을 위한 js문서 [ bootstrap.js ]  : 반드시 jquery라이브러리문서 다음에 위치해야 함.-->
+
+
+        <!-- 방법은 3가지 : 다운로드방식, CDN방식, install방식 - 3번째 설치형방식은 하지 않을 것임. -->
+        <!-- 1. 다운로드 방식 -->
+        <!-- 다운로드받은 압축파일 해제.. : 문서를 모두 가져와도 되지만 우리는 필요한 기본 기능만을 우선 사용하는 만큼 위 3가지 기본문서만 준비-->        
+        <!-- bootstrap-4.3.1폴더 안에 dist폴더 안에 js와 css폴더가 나뉘어 있고 각각의 폴더 안에 bootstrap의 기본 문서가 존재함. 이를 본인 프로젝트폴더에 복사 붙여넣기 -->
+
+        <!-- 1.1) css문서 추가 : 사실 이 css문서만 있어도 우리의 목표인 빠르고 손쉬운 스타일링 할 수 있음.-->
+        <!-- <link rel="stylesheet" href="css/bootstrap.css"/> -->
+        <!-- 잘되었는지 확인하기 위해 button요소 하나 추가 및 class적용 -->
+        
+        <!-- 1.2)  1.3) js문서는 이곳에 넣어도 되지만 웹페이지가 시작할 때 부터 이벤트처리같은 특별한 동적기능들을 수행하지 않는 경우가 많아 body이 마지막에 작성하는 것을 권장-->
+        <!--  why?? 문서로딩에 시간이 걸려서 body의 내용을 보여주는 데 까지 기다려야 해서 웹페이지가 느리게 느껴짐. -->
+        <!-- 하지만 요새는 네트워크 속도가 빨라서 굳이..이렇게 안해도 될 듯. -->
+        <!-- <script type="javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="javascript" src="js/bootstrap.js"></script> -->
+
+
+        <!-- 2. CDN방식 ( Content Delivery Network ) -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+
+
+        
+
+    </head>
+
+    <body>
+        <!-- bootstrap적용하기 : 이미 css에 클래스선택자를 통해 각각의 스타일코드들이 작성되어 있으므로 해당하는 클래스를 지정해주기만 하면 됨. -->        
+        <button class="btn btn-primary">BUTTON</button>
+
+        <!-- 부트스트랩라이브러리의 개략적 사용 알아보기 -->
+
+        <!--1) 버튼이 벽에 너무 붙어있어서 별로죠? body에 padding같은 스타일을 줄수도 있지만...부트스트랩을 이용할 수 도 있음..-->
+        <div class="container" style="text-align: center; padding-top: 16px;"> <!-- 당연히 부트스트랩과 일반 인라인 스타일을 같이 사용할 수 있음.-->
+            
+            <button class="btn btn-primary">button</button>
+            <button class="btn btn-success">button</button>                        
+
+        </div>
+
+        <!--가장 많이 사용하는 테이블작업도 좀 쉽게 -->   
+        <table class="table table-hover mt-3"><!-- 마진탑[margin-top] : mt-0 ~ mt-5  // ml[margin-left] -->
+            <tr>
+                <th>no</th>
+                <th>name</th>
+                <th>message</th>
+                <th>date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>sam</td>
+                <td>Hello bootstrap.</td>
+                <td>2019.03.20</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>robin</td>
+                <td>Nice to meet you.</td>
+                <td>2019.03.21</td>
+            </tr>
+        </table>
+        <hr>
+        <!-- pagination을 주면 옆으로 배치되며 도트표식이 없어짐 -->
+        <ul class="pagination justify-content-center"><!-- 정렬 : justify-content-center-->
+            <!-- a요소에 page-link를 주면 사각형박스가 생기고, li요소에 page-item를 주면 각 박스들이 한덩어리처럼 느껴지듯이 처음과 마지막 버튼의 모서리가 둥그스레하게 됨 -->
+            <li class="page-item"><a href="#" class="page-link">1</a></li>
+            <li class="page-item"><a href="#" class="page-link">2</a></li>
+            <li class="page-item"><a href="#" class="page-link">3</a></li>
+            <li class="page-item"><a href="#" class="page-link">4</a></li>
+            <li class="page-item"><a href="#" class="page-link">5</a></li>               
+        </ul>
+
+
+        <!-- 쇼핑몰 같은 곳에서 자주보는 Card형태의 컴포넌트 -->
+        <div class="card ml-3" style="width: 20rem;"><!-- rem: em처럼 기본 글씨 크기를 기반으로한 사이즈이되 em과 다르게 최상위 컨테이너만을 기준으로 함..-->
+            <img src="./images/moana01.jpg" alt="moana01" class="card-img-top"><!-- card-img-top : 이미지를 카드의 상단에 놓고 이미지의 사이즈를 비율에 적절히 맞추어줌-->
+            <div class="card-body">
+                <h5 class="card-title">MOANA 01</h5>
+                <p class="card-text">moana is very good movie.</p>
+                <a href="#" class="btn btn-primary">Go moana</a>
+            </div> 
+        </div>
+
+        <div class="card ml-3" style="width: 20rem;"><!-- rem: em처럼 기본 글씨 크기를 기반으로한 사이즈이되 em과 다르게 최상위 컨테이너만을 기준으로 함..-->
+            <img src="./images/moana02.jpg" alt="moana02" class="card-img-top"><!-- card-img-top : 이미지를 카드의 상단에 놓고 이미지의 사이즈를 비율에 적절히 맞추어줌-->
+            <div class="card-body">
+                <h5 class="card-title">MOANA 02</h5>
+                <p class="card-text">moana is very good movie.</p>
+                <a href="#" class="btn btn-primary">Go moana</a>
+            </div> 
+        </div>        
+
+
+        <!-- 이렇게 div로 감싸서 row클래스를 주고 사이즈를 조절해보면.. 옆으로 배치됨..[ row : 한행(줄) 에 배치하라는 스타일링 ] -->
+        <div class="container mt-3">
+                <div class="row">
+                        <!-- 쇼핑몰 같은 곳에서 자주보는 Card형태의 컴포넌트 -->
+                        <div class="card ml-3" style="width: 20rem;"><!-- rem: em처럼 기본 글씨 크기를 기반으로한 사이즈이되 em과 다르게 최상위 컨테이너만을 기준으로 함..-->
+                            <img src="./images/moana01.jpg" alt="moana01" class="card-img-top" style="height: 200px;"><!-- card-img-top : 이미지를 카드의 상단에 놓고 이미지의 사이즈를 비율에 적절히 맞추어줌-->
+                            <div class="card-body">
+                                <h5 class="card-title">MOANA 01</h5>
+                                <p class="card-text">moana is very good movie.</p>
+                                <a href="#" class="btn btn-primary">Go moana</a>
+                            </div> 
+                        </div>
+            
+                        <div class="card ml-3" style="width: 20rem;"><!-- rem: em처럼 기본 글씨 크기를 기반으로한 사이즈이되 em과 다르게 최상위 컨테이너만을 기준으로 함..-->
+                            <img src="./images/moana02.jpg" alt="moana02" class="card-img-top" style="height: 200px;"><!-- card-img-top : 이미지를 카드의 상단에 놓고 이미지의 사이즈를 비율에 적절히 맞추어줌-->
+                            <div class="card-body">
+                                <h5 class="card-title">MOANA 02</h5>
+                                <p class="card-text">moana is very good movie.</p>
+                                <a href="#" class="btn btn-primary">Go moana</a>
+                            </div> 
+                        </div>
+
+                        <div class="card ml-3" style="width: 20rem;"><!-- rem: em처럼 기본 글씨 크기를 기반으로한 사이즈이되 em과 다르게 최상위 컨테이너만을 기준으로 함..-->
+                            <img src="./images/moana03.jpg" alt="moana03" class="card-img-top" style="height: 200px;"><!-- card-img-top : 이미지를 카드의 상단에 놓고 이미지의 사이즈를 비율에 적절히 맞추어줌-->
+                            <div class="card-body">
+                                <h5 class="card-title">MOANA 03</h5>
+                                <p class="card-text">moana is very good movie.</p>
+                                <a href="#" class="btn btn-primary">Go moana</a>
+                            </div> 
+                        </div>
+            
+                    </div>
+        </div>
+
+
+        <!-- 부트스트랩의 여러 스타일들 중 가장 기본적인것들만 소개.. 나머지는 각자 bootstrap사이트에서 참고 -->
+        <!-- w3schools사이트의 BOOTSTRAP튜토리얼 참고 : https://www.w3schools.com/bootstrap4/default.asp   -->
+
+
+
+
+
+        <!-- 1.2)  1.2) 웹페이지 로딩의 마지막에 부트스트랩 스크립트배치 -->
+        <!-- <script type="javascript" src="js/jquery-3.2.1.min.js"></script>
+        <script type="javascript" src="js/bootstrap.js"></script> -->
+
+
+        <!-- 2.2) 2.3) CDN방식 -->
+        <!-- bootstrap.js전에 jQuery and Popper.js를 먼저 include해야 함 -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </body>
+</html>

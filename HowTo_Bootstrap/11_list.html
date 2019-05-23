@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>List Group style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- 기본적인 리스트뷰 [ .list-group / .list-group-item ]-->
+        <div class="container mt-3">
+            <ul class="list-group">
+                <li class="list-group-item">aaa</li>
+                <li class="list-group-item">bbb</li>
+
+                <!-- 선택상태로 지정 가능 [ .active ]-->
+                <li class="list-group-item active">ccc</li>            
+            </ul>
+        </div>
+        <hr>
+
+
+        <!-- 선택이 가능한 리스트뷰 (linked item) : <a>요소 이용-->
+        <!-- 리스트뷰라서 기본적으로 위에서 ul요소를 사용하였지만 반드시 그래야 하는 것은 아님 -->
+        <div class="container">
+            <div class="list-group">                                
+                <a href="#" class="list-group-item">aaaa</a>
+                <a href="#" class="list-group-item">bbbb</a>
+                <a href="#" class="list-group-item">cccc</a>
+                <!-- 그냥 만들면 <a>요소에 의해 파란색의 링크글씨가 나와서 우리가 일반적으로 알던 리스트뷰의 마우스 hover 액션과는 좀 다른 느낌임. -->
+                <!-- 일반적으로는 리스트아이템영역이 음영처리되는 액션효과가 많음 -->
+                <!-- 그래서 아이템 액션 스타일지정 [ .list-group-item-action ] -->
+                <a href="#" class="list-group-item list-group-item-action">dddd</a>
+                <a href="#" class="list-group-item list-group-item-action">eeee</a>
+                <a href="#" class="list-group-item list-group-item-action">ffff</a>
+            </div>
+            <hr>
+
+            <!-- disabled : 사용불가. [마우스를 hover해도 음영처리되지 않음, 마우스커서도 안변하고, 클릭도 안됨] -->
+            <div class="list-group">                                
+                <a href="#" class="list-group-item list-group-item-action">dddd</a>
+                <a href="#" class="list-group-item list-group-item-action">eeee</a>
+                <a href="#" class="list-group-item list-group-item-action disabled">ffff</a>
+                <!-- .list-group-item-action 스타일 때문에 disabled된 아이템의 회색느낌이 구별되지 않음. -->
+                <!-- 원한다면 다른 아이템들의 색상지정 -->
+                <a href="#" class="list-group-item list-group-item-action text-primary">gggg</a>
+                <!-- 문제는 disabled된 아이템의 색상도 고정된다는 것... 잘 고려하여 사용할 것 -->
+                <a href="#" class="list-group-item list-group-item-action text-primary disabled">hhhh</a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 리스트뷰의 아웃라인 경계선을 제거 [ Remove Borders :   .list-group-flush ] -->
+        <div class="container">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">aaa</li>
+                <li class="list-group-item">bbb</li>
+                <li class="list-group-item active">ccc</li>            
+            </ul>
+        </div>
+        <hr>
+
+        <!-- 수평 리스트뷰 [ horizontal ] -->
+        <div class="container">
+            <ul class="list-group list-group-horizontal">
+                <li class="list-group-item">aaa</li>
+                <li class="list-group-item">bbb</li>
+                <li class="list-group-item active">ccc</li>            
+            </ul>
+        </div>
+        <hr>
+
+        <!-- 리스트 아이템별 색상지정 가능 [ .list-group-item-primary ] -->
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item list-group-item-primary">aaa</li>
+                <li class="list-group-item list-group-item-secondary">bbb</li>
+                <li class="list-group-item list-group-item-success">ccc</li>
+                <li class="list-group-item list-group-item-info">aaa</li>
+                <li class="list-group-item list-group-item-warning">bbb</li>
+                <li class="list-group-item list-group-item-danger">ccc</li>
+                <li class="list-group-item list-group-item-dark">aaa</li>
+                <li class="list-group-item list-group-item-light">bbb</li>                
+            </ul>
+            <hr>
+
+            <!-- 당연히 링크가되는 리스트아이템도 색상지정 가능 -->
+            <div class="list-group">
+                <a href="#" class="list-group-item list-group-item-action list-group-item-primary">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-secondary">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-success">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-info">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-warning">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-danger">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-dark">aaa</a>
+                <a href="#" class="list-group-item list-group-item-action list-group-item-light">aaa</a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 리스트뷰에 뱃지[Badge] 달기 -->
+        <div class="container">
+            <ul class="list-group">
+                <li class="list-group-item">aaa <span class="badge badge-info">10</span></li>
+                <li class="list-group-item">bbb <span class="badge badge-info badge-pill">100</span></li>
+                <li class="list-group-item">ccc <span class="badge badge-primary">new</span></li>
+                <!-- 그냥 놓으면 글씨 바로 옆에 붙으니.. 글씨는 리스트뷰 왼쪽, badge는 리스트뷰의 가장 오른쪽으로 배치하는 것이 좋겠죠.. -->
+                <!-- 리스트뷰의 display속서을 flex로 하고 [ .d-flex ] 콘텐츠 정렬을 사이를 벌리도록...[ .justify-content-between] -->
+                <li class="list-group-item d-flex justify-content-between">aaa <span class="badge badge-dark">10</span></li>
+                <li class="list-group-item d-flex justify-content-between">bbb <span class="badge badge-dark badge-pill">100</span></li>
+                <li class="list-group-item d-flex justify-content-between">ccc <span class="badge badge-primary">new</span></li>
+                <!-- 뱃지의 크기가 아이템크기와 약간 다른 느낌이 있음. 뱃지안에 글씨도 좀 위로 치우쳐저 있고. -->
+                <!-- li요소 안에 있는 아이템들(글씨/뱃지)을 수직정렬을 가운데로 [ display:flex 로 했을 때 flex CSS의 align-items:center속성 지정과 같음 => .align-items-center] -->
+                <li class="list-group-item d-flex justify-content-between align-items-center">aaa <span class="badge badge-dark">10</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">bbb <span class="badge badge-dark badge-pill">100</span></li>
+                <li class="list-group-item d-flex justify-content-between align-items-center">ccc <span class="badge badge-primary">new</span></li>
+            </ul>
+        </div>
+        <hr>
+
+        
+
+
+
+
+        
+
+    </body>
+
+</html>

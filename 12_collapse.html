@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title></title>
+
+        <!-- bootstrap library적용 : w3schools.com에서 링크 복사(CDN)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container mt-3">
+
+            <!-- 보여졌다/숨겨졌다...토글링 -->
+            <button class="btn btn-primary" data-toggle="collapse" data-target="#aa">button</button>
+            <div class="collapse" id="aa">
+                This is collapsed Content.
+            </div>
+            <hr>
+
+            <!-- 버튼대신에 a요소로도 가능함. 이때는 target대신에 href를 이용 -->
+            <a href="#bb" class="btn btn-primary" data-toggle="collapse">toggle</a>
+            <div class="collapse" id="bb">
+                This is collapsed Content.
+                <img src="./images/moana02.jpg" alt="" width="150px;">
+            </div>
+            <hr>
+
+            <!-- 기본이 열려 있는 상태로 시작 -->
+            <a href="#cc" class="btn btn-primary" data-toggle="collapse">toggle</a>
+            <div class="collapse show" id="cc">
+                This is collapsed Content.
+                <img src="./images/moana02.jpg" alt="" width="150px;">
+            </div>
+            <hr>
+
+            <!-- Accordian : 아주 유명한 구조의 collapse -->
+            <!-- collapse의 그룹핑.. -->
+            <div>
+                <!-- 항목#1 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d1" data-toggle="collapse" class="card-link">Item 1</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d1">
+                        <h5 class="card-title">item 1</h5>
+                        <p class="card-text">this is item 1</p>
+                    </div>
+                </div>
+
+                <!-- 항목#2 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d2" data-toggle="collapse" class="card-link">Item 2</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d2">
+                        <h5 class="card-title">item 2</h5>
+                        <p class="card-text">this is item 2</p>
+                    </div>
+                </div>
+
+                <!-- 항목#3 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d3" data-toggle="collapse" class="card-link">Item 3</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d3">
+                        <h5 class="card-title">item 3</h5>
+                        <p class="card-text">this is item 3</p>
+                    </div>
+                </div>               
+
+            </div>
+            <hr>
+
+            <!-- 다른항목열면 자동으로 닫히도록 -->
+            <div class="accordian" id="acc">
+                <!-- 항목#1 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d4" data-toggle="collapse" class="card-link">Item 1</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d4" data-parent="#acc">
+                        <h5 class="card-title">item 1</h5>
+                        <p class="card-text">this is item 1</p>
+                    </div>
+                </div>
+
+                <!-- 항목#2 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d5" data-toggle="collapse" class="card-link">Item 2</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d5" data-parent="#acc">
+                        <h5 class="card-title">item 2</h5>
+                        <p class="card-text">this is item 2</p>
+                    </div>
+                </div>
+
+                <!-- 항목#3 -->
+                <div class="card">
+                    <div class="card-header"><a href="#d6" data-toggle="collapse" class="card-link">Item 3</a></div>
+                    <!-- card의 body는 숨겨놓기.. -->
+                    <div class="card-body collapse" id="d6" data-parent="#acc">
+                        <h5 class="card-title">item 3</h5>
+                        <p class="card-text">this is item 3</p>
+                    </div>
+                </div>               
+
+            </div>
+            <hr>
+
+
+
+
+        </div>
+
+        
+
+        
+        
+    </body>
+</html>

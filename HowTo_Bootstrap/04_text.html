@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Typography</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- 부트스트랩 라이브러리를 추가했을 때와 안했을때의 기본스타일이 다름. [폰트, 사이즈, 마진, 패딩이 조금 다름] -->
+        <h1>Bootstrap heading element</h1>
+        <h2>Bootstrap heading element</h2>
+        <h3>Bootstrap heading element</h3>
+        <h4>Bootstrap heading element</h4>
+        <h5>Bootstrap heading element</h5>
+        <h6>Bootstrap heading element</h6>
+        <!-- h6 : 1rem = 16px , 그위로 h2까지 0.25씩 올라가고 h1은 : 2.5rem = 40px -->
+        <hr>
+
+        <!-- 새로운 큰 Heading 스타일이 있음. : .display-X [1~4] -->        
+        <h1 class="display-1">Display</h1>
+        <h1 class="display-2">Display</h1>
+        <!-- element는 상관없음. h4든 p든.. -->
+        <h4 class="display-3">Display</h4>
+        <p class="display-4">Display</p>
+        <hr>
+
+        <!-- <small>엘리먼트의 사용 : 부제목같은 것 만들때 사용-->
+        <h1>Heading <small>second title</small></h1>
+        <h3>Heading <small>second title</small></h3>
+        <hr>
+
+        <!-- 위처럼 기존에 사용하던 태그들의 스타일이 조금씩 변경되어 보여짐 -->
+
+        <!-- <mark> : highlight표식 -->
+        <p>This is <mark>mark</mark> element</p>
+
+        <!-- <code> : 분홍색  -->
+        <p>This is <code>code</code> element</p>
+
+        <!-- <abbr>[ abbreviation(어브리비에이션) : 축약형 ] : 밑줄표식 및 마우스 hover시에 ?표시 및 툴팁표시와 커서모양변경 -->
+        <p>This is <abbr title="Java Development Kit">JDK</abbr></p>
+
+        <!-- <kbd> :키보드 단축기 표시할 때.. -->
+        <p> Use <kbd>ctrl + c</kbd> to copy the file.</p>
+
+        <!-- <dl> Definition List -->
+        <dl>
+            <dt>Coffee</dt>
+            <dd>- black hot drink</dd>
+            <dt>Milk</dt>
+            <dd>- white cold drink</dd>
+        </dl>
+        
+        <!-- <blockquate>[인용문] : no 수업-->
+        <hr>
+        
+        <!-- 글씨 스타일이나 정렬등 각종 스타일을 .클래스선택자로 지정할 수 있음. -->
+        <p style="font-weight: bold; font-style: italic; text-align: center;">This is inline style</p>
+        <p class="font-weight-bold font-italic text-center">This is Bootstrap style</p>
+        <!-- 이밖에도 많이 있음. Bootstrap또는 w3schools를 참고. -->
+        <hr>
+
+        <!-- 문맥(contextual)에 맞는 특정 글씨 색상 : Button때 했던 btn-primary와 같음..-->        
+        <div class="container">
+            <p>This is paragraphy.</p>
+            <p class="text-primary">This is paragraphy.</p>
+            <p class="text-secondary">This is paragraphy.</p>
+            <p class="text-success">This is paragraphy.</p>
+            <p class="text-info">This is paragraphy.</p>
+            <p class="text-warning">This is paragraphy.</p>
+            <p class="text-danger">This is paragraphy.</p>
+            <p class="text-muted">This is paragraphy.</p>
+            <p class="text-white">This is paragraphy.</p>
+            <p class="text-dark">This is paragraphy.</p>
+            <p class="text-body">This is paragraphy.</p><!-- default 색상 : 지정안하면 이 색상-->
+        </div>
+        <!-- 디자인 감각이 부족할 때는 색상 고민하지 말고 이중에서 사용하는 것도 나쁘지 않음. -->
+        <hr>
+
+        <!-- 당연히 <p>요소가 아닌 <a>요소에도 색상지정 가능 -->
+        <div class="container">
+            <a href="#" class="text-primary">primary link</a>
+            <a href="#" class="text-info">info link</a>
+            <a href="#" class="text-success">success link</a>
+            <a href="#" class="text-danger">danger link</a>
+        </div>
+        <hr>
+
+        <!-- 위와 같이 배경색상지정도 가능함 -->
+        <div class="container">
+            <p>This is paragraphy.</p>
+            <p class="bg-primary">This is paragraphy.</p>
+            <p class="bg-secondary">This is paragraphy.</p>
+            <p class="bg-success">This is paragraphy.</p>
+            <p class="bg-info">This is paragraphy.</p>
+            <p class="bg-warning">This is paragraphy.</p>
+            <p class="bg-danger">This is paragraphy.</p>
+            <!-- bg-muted는 없음 -->
+            <!-- <p class="bg-muted">This is paragraphy.</p> -->            
+            <p class="bg-white">This is paragraphy.</p>
+            <p class="bg-dark">This is paragraphy.</p>
+            <!-- muted 대신... -->
+            <p class="bg-light"">This is paragraphy.</p>            
+        </div>
+        <hr>
+
+        
+
+        
+        
+
+
+
+
+
+
+        
+
+        
+
+
+        
+    </body>
+
+
+</html>

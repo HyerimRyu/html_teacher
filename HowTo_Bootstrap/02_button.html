@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <!-- 반응형 웹을 위한 뷰포트 설정 -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap button</title>
+
+        <!-- 부트스트랩 css추가 : CDN방식사용 -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    </head>
+
+    <body>
+        <!-- 기본버튼 -->
+        <button>BUTTON</button>
+        <!-- 안이쁘니까 좀 이쁘장하게..스타일링...이때 bootstrap사용 -->
+
+        <!-- bootstrap적용하기 : 이미 css에 클래스선택자를 통해 각각의 스타일코드들이 작성되어 있으므로 해당하는 클래스를 지정해주기만 하면 됨. -->
+        <button class="btn">BUTTON</button>
+
+        <!-- 버튼이 약간 다르지만 배경색이 없어서 그렇게 이쁘게 느껴지지 않으니..추가로 스타일 적용  -->
+        <!-- 하나의 요소에 여러개의 clss지정이 가능하니까... -->
+        <button class="btn btn-primary">BUTTON</button>
+
+        <!-- 요소들이 너무 벽에 붙어 있어서 보기 안 좋으니... -->
+        <p class="mt-3">
+            <button class="btn btn-primary">BUTTON</button>
+
+            <!-- 버튼이 될 수 있는 요소들은 모두 같은 스타일 가능 -->
+            <a href="#" class="btn btn-primary">anchor</a>
+            <input type="button" value="input type button" class="btn btn-primary">
+            <input type="submit" value="input type submit" class="btn btn-primary">
+            <input type="reset" value="input type reset" class="btn btn-primary">
+
+        </p>
+
+        <!-- 가운데 배치 : 스타일에서는 text-align:center를 class로 지정 -->
+        <p class="text-center">
+            <button class="btn btn-primary">BUTTON</button>
+            <!-- 버튼의 성질에 따라 다른 색상지정하는 것을 class로 모두 스타일링 해 놓았음. -->
+            <button class="btn btn-secondary">BUTTON</button>
+            <button class="btn btn-success">BUTTON</button>
+            <button class="btn btn-warning">BUTTON</button>
+            <button class="btn btn-info">BUTTON</button>
+            <button class="btn btn-danger">BUTTON</button>
+            <button class="btn btn-light">BUTTON</button>
+            <button class="btn btn-dark">BUTTON</button>
+            <button class="btn btn-link">BUTTON</button>
+        </p>
+
+        <!-- 버튼의 사이즈 조절 : lg:Large-->
+        <p class="text-center">
+                <button class="btn btn-primary btn-lg">BUTTON</button>
+                <button class="btn btn-secondary btn-lg">BUTTON</button>
+                <button class="btn btn-success btn-lg">BUTTON</button>
+                <button class="btn btn-warning btn-lg">BUTTON</button>
+                <button class="btn btn-info btn-lg">BUTTON</button>
+                <button class="btn btn-danger btn-lg">BUTTON</button>
+                <button class="btn btn-light btn-lg">BUTTON</button>
+                <button class="btn btn-dark btn-lg">BUTTON</button>
+                <button class="btn btn-link btn-lg">BUTTON</button>
+        </p>
+
+        <!-- 버튼의 사이즈 조절 : sm:small-->
+        <p class="text-center">
+                <button class="btn btn-primary btn-sm">BUTTON</button>
+                <button class="btn btn-secondary btn-sm">BUTTON</button>
+                <button class="btn btn-success btn-sm">BUTTON</button>
+                <button class="btn btn-warning btn-sm">BUTTON</button>
+                <button class="btn btn-info btn-sm">BUTTON</button>
+                <button class="btn btn-danger btn-sm">BUTTON</button>
+                <button class="btn btn-light btn-sm">BUTTON</button>
+                <button class="btn btn-dark btn-sm">BUTTON</button>
+                <button class="btn btn-link btn-sm">BUTTON</button>
+        </p>
+
+
+        <!-- 버튼의 색을 배경으로 주지 않고 윤곽선(out line)과 글씨색상으로 지정하기 -->
+        <p class="text-center">
+            <button class="btn btn-outline-primary">BUTTON</button>
+            <button class="btn btn-outline-secondary">BUTTON</button>
+            <button class="btn btn-outline-success">BUTTON</button>
+            <button class="btn btn-outline-warning">BUTTON</button>
+            <button class="btn btn-outline-info">BUTTON</button>
+            <button class="btn btn-outline-danger">BUTTON</button>
+            <!-- light는 윤곽선이 밝은 색이라 안보임 -->
+            <button class="btn btn-outline-light">BUTTON</button>
+            <button class="btn btn-outline-dark">BUTTON</button>
+            <!-- 링크를 아웃라인이 없음. -->
+            <!-- <button class="btn btn-outline-link">BUTTON</button> -->
+        </p>
+
+
+        <!-- 블럭요소 버튼 스타일 -->
+        <p>
+            <button class="btn btn-primary btn-block">block level button style</button>
+            <button class="btn btn-success btn-block">block level button style</button>
+        </p>
+
+        <!-- disable 버튼 스타일 -->
+        <p>
+            <button class="btn btn-primary" disabled>disable button</button>
+            <button class="btn btn-secondary" disabled>disable button</button>
+        </p>
+
+
+        <!-- 버튼그룹만들기 -->
+        <p>
+            <!-- role속성을 통해 웹접근성(시각장애인들이 사용하는 '스크린리더'에서 역할이 읽어지도록) 설정 -->
+            <!-- aria-label속성 역시 스크린리터에서 추가적으로 읽어주는 글씨 -->
+            <div class="btn-group" role="group" aria-label="button group test">
+                <button class="btn btn-primary">aaa</button>
+                <button class="btn btn-primary">bbb</button>
+                <button class="btn btn-primary">ccc</button>
+            </div>
+
+        </p>
+
+        <!-- 수직배치 버튼 그룹만들기 -->
+        <p>
+            <!-- role속성을 통해 웹접근성(시각장애인들이 사용하는 '스크린리더'에서 역할이 읽어지도록) 설정 -->
+            <!-- aria-label속성 역시 스크린리터에서 추가적으로 읽어주는 글씨 -->
+            <div class="btn-group-vertical" role="group" aria-label="button group test">
+                <button class="btn btn-primary">aaa</button>
+                <button class="btn btn-primary">bbb</button>
+                <button class="btn btn-primary">ccc</button>
+            </div>
+
+        </p>        
+
+        
+        <!-- 버튼그룹을 여러개 넣을 때 ....툴바같은 곳에 사용하는 버튼 그룹 -->
+        <!-- 수업 안함.. why? 어차피 버튼그룹은 여러개를 놓으면 자동으로 옆으로 배치됨. 살짝 마진들 있는 상태로.. -->        
+        <!-- role속성을 통해 웹접근성(시각장애인들이 사용하는 '스크린리더'에서 역할이 읽어지도록) 설정 -->
+        <!-- aria-label속성 역시 스크린리터에서 추가적으로 읽어주는 글씨 -->
+        <!-- <p>
+            
+            <div class="btn-toolbar" role="toobar" aria-label="Toolbar with button group">
+                <div class="btn-group ml-2" role="group" aria-label="first button group test">
+                    <button class="btn btn-primary">apple</button>
+                    <button class="btn btn-primary">banana</button>
+                    <button class="btn btn-primary">orange</button>
+                </div>
+
+                <div class="btn-group ml-2" role="group" aria-label="second button group test">
+                    <button class="btn btn-primary">korea</button>
+                    <button class="btn btn-primary">japan</button>
+                    <button class="btn btn-primary">china</button>
+                    <button class="btn btn-primary">usa</button>
+                </div>
+
+                <div class="btn-group ml-2" role="group" aria-label="third button group test">
+                    <button class="btn btn-primary">button</button>
+                </div>
+            </div>
+
+        </p> -->
+
+
+        <!-- jquery & 부트스트랩 JS 추가 : CDN방식-->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    </body>
+</html>

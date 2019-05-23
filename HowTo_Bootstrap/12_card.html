@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Card style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- 명함카드같은 모양의 박스 스타일 -->        
+        <div class="container mt-3">
+            <!-- 가장 기본적인 카드모양 -->
+            <div class="card">
+                Hello world.
+            </div>
+            <hr>
+
+            <!-- 여백도 없고 보기 좋지 않음. -->
+            <div class="card">
+                <!-- 카드안에 본문영역 -->
+                <div class="card-body">
+                    Hello world.
+                </div>
+            </div>
+            <hr>
+
+            <!-- 카드안에 기본적으로 3개의 영역구분이 가능함 : 구분선과 음영처리.  -->
+            <div class="card">
+                <!--1. 카드의 헤드라인 -->
+                <div class="card-header">HEADER</div>
+
+                <!--2. 카드의 본문  -->
+                <div class="card-body">Hello world.</div>
+
+                <!--3. 카드의 footer-->
+                <div class="card-footer">FOOTER</div>
+            </div>
+            <hr>
+
+            <!-- card의 배경색 지정 가능함 [ bg-primary ] -->
+            <div class="card bg-primary">
+                <div class="card-body">Hello world</div>
+            </div>
+            <!-- 글씨색상도 변경하고 싶다면... (margin top : mt-1) -->
+            <div class="card bg-secondary text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-success text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-info text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-warning text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-danger text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-dark text-white mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+            <div class="card bg-light text-dark mt-1">
+                <div class="card-body">Hello world</div>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 카드스타일의 레이아웃들 -->
+        <div class="container">
+
+            <!-- Title, text and link를 가진 카드레이아웃 : 꽤나 많이 보던 모습 -->
+            <div class="card">
+                <!-- card-header와 card-footer는 구분선도 있고 해서 필요할 때만 사용 -->
+                <div class="card-body">
+                    <h4>Card Title</h4>
+                    <p>Card layout example. This is test text.</p>
+                    <a href="#">Link A</a>
+                    <a href="#">Link B</a>
+                </div>
+            </div>
+            <hr>
+            <!-- 이렇게 그냥써도 되지만 카드레이아웃에 적합하게 <a>요소의 간격이라던지 제목과의 간격을 조금 보기좋게 스타일링이 가능함 -->
+
+            <div class="card">
+                <!-- card-header와 card-footer는 구분선도 있고 해서 필요할 때만 사용 -->
+                <div class="card-body">
+                    <h4 class="card-title">Card Title</h4>
+                    <p class="card-text">Card layout example. This is test text.</p>
+                    <a href="#" class="card-link">Link A</a>
+                    <a href="#" class="card-link">Link B</a>
+                </div>
+            </div>
+            <hr>
+
+
+            <!-- 이미지를 가진 카드 레이아웃 -->
+            <div class="card">
+                <div class="card-body">
+                    <img src="./images/moana01.jpg" alt="moana01">
+                    <h4>MOANA 1</h4>
+                    <p>Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                </div>
+            </div>
+            <hr>
+            <!-- body안에 있다보니 이미지도 패딩이 되어 있는 모습이어서 조금 변경해보기 -->
+
+            <!-- 카드레이아웃에 적합한 모습으로 스타일링 -->
+            <div class="card">
+                <!-- 카드상단 이미지설정 : .card-img-top -->
+                <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+                <div class="card-body">                    
+                    <h4 class="card-title">MOANA 1</h4>
+                    <p class="card-text">Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                </div>
+            </div>
+            <hr>
+            <!-- 잘 만들어 지지만 이미지의 사이즈가 크면 카드가 너무 크게되므로 카드의 너비를 지정 -->
+            <div class="card" style="width: 300px;">
+                <!-- 카드상단 이미지설정 : .card-img-top -->
+                <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+                <div class="card-body">                    
+                    <h4 class="card-title">MOANA 1</h4>
+                    <p class="card-text">Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 반대로 이미지가 아래[bottom]에 오도록..할 수 도 있음 -->
+            <div class="card" style="width: 300px;">                
+                <div class="card-body">                    
+                    <h4 class="card-title">MOANA 1</h4>
+                    <p class="card-text">Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                </div>
+                <!-- 카드하단 이미지설정 : .card-img-bottom -->
+                <img src="./images/moana01.jpg" alt="moana01" class="card-img-bottom">
+            </div>
+            <hr>
+
+            <!-- 위의 레이아웃은 링크버튼을 눌러야 링크가 실행되지만 -->
+            <!-- 카드전체를 클릭할 수 있도록 할 수 있음. (즉, 카드가 링크 역할을 함) -->
+            <!-- <a>요소에 .stretched-link 추가 -->
+            <div class="card" style="width: 300px;">                
+                <div class="card-body">                    
+                    <h4 class="card-title">MOANA 1</h4>
+                    <p class="card-text">Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary stretched-link">GO MOANA SITE</a>
+                </div>
+                <!-- 카드하단 이미지설정 : .card-img-bottom -->
+                <img src="./images/moana01.jpg" alt="moana01" class="card-img-bottom">
+            </div>
+            <!-- 카드에 마우스를 올리면 마우스커서모양이 바뀌고 <a>버튼에 hover효과가 보여짐 -->
+            <hr>
+            
+            
+            <!-- 카드전체를 이미지로 하고(즉, 배경이미지 처럼) 그 위에 오버레이되어서 card-body가 보이도록 -->
+            <!-- card-body에 .card-img-overlay 추가 -->
+            <div class="card" style="width: 600px;">
+                <!-- 카드상단 이미지설정 : .card-img-top -->
+                <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+
+                <!-- card-body에 .card-img-overlay 추가 : 글씨가 배경그림이미지로 인해 안보일 수도 있으니 글씨 색상도 고려..-->
+                <div class="card-body card-img-overlay text-white">                    
+                    <h4 class="card-title">MOANA 1</h4>
+                    <p class="card-text">Moana is very good movie.</p>
+                    <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                </div>
+            </div>            
+        </div>
+        <hr>
+
+        <!-- 카드여러개 배치 -->
+        
+        <div class="container">
+
+            <!-- 카드의 기본 width:100%여서 여러개를 놓으면 수직으로 배치됨 ( like. pinterlest 사이트 )-->
+            <!-- 이를 여러개의 컬룸(Column)으로 보이도록 [ .card-columns ]-->            
+            <div class="card-columns">
+                <div class="card bg-primary">
+                    <div class="card-body">Hello world</div>
+                </div>
+                <div class="card bg-secondary text-white mt-1">
+                    <div class="card-body">Hello world</div>
+                </div>
+                <div class="card bg-success text-white mt-1">
+                    <div class="card-body">Hello world</div>
+                </div>
+                <div class="card bg-info text-white mt-1">
+                    <div class="card-body">Hello worldHello worldHello worldHello worldHello worldHello world</div>
+                </div>
+                <div class="card bg-warning text-white mt-1">
+                    <div class="card-body">Hello world</div>
+                </div>
+                <div class="card bg-danger text-white mt-1">
+                    <div class="card-body">Hello world</div>
+                </div>
+                <div class="card bg-dark text-white mt-1">
+                    <div class="card-body">H</div>
+                </div>
+                <div class="card bg-light text-dark mt-1">
+                    <div class="card-body">H</div>
+                </div>
+            </div>
+            <!-- 1개의 카드마다 너비는 3/1씩 차지하게 됨(마진도 자동 있음) : 1개만 있어도 3/1크기의 너비임-->
+            <!-- 가로로 최대 3개까지 놓여지도록 배치되며 -->
+            <!-- 3개가 넘어가면 가로로 최대 3개가 되도록 row가 늘어남..{주의!! 배치순서는 아래로...옆으로..} -->
+            <!-- 카드의 사이즈들이 다르면 비대칭 높이를 가진 테이블(Staggerd Grid Layout)이 됨 -->
+            <!-- 주의 : 화면사이즈가 576px보다 작으면 모두 수직으로 배치됨...-->
+            <hr>
+            
+            <!-- 카드레이아웃들로 배치.. -->
+            <div class="card-columns">
+                <div class="card">
+                    <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 1</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana02.jpg" alt="moana02" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 2</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana03.jpg" alt="moana03" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 3</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana04.jpg" alt="moana04" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 4</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana05.jpg" alt="moana05" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 5</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 높이에 따른 불규칙한 카드배치가 싫다면 Card-Column대신에 카드뷰의 높이를 자동으로 같게 만들어 주는 Card Deck 사용 -->
+            <!-- 주의할점은 card-deck는 모든 카드들을 무조거 한줄에 배치하도록 너비가 조정되어져서 개수가 많아지면 모양이 이상해짐. -->
+            <!-- 개수가 많을 때는 여러개의 card-deck사용 -->
+            <!-- 주의! 화면사이즈가 576px보다 작은 경우에는 무조건 수직으로만 배치됨 -->
+            <div class="card-deck">
+                <div class="card">
+                    <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 1</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana02.jpg" alt="moana02" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 2</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana03.jpg" alt="moana03" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 3</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana04.jpg" alt="moana04" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 4</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana05.jpg" alt="moana05" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 5</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+
+            <!-- 카드간의 간격 필요 없이 그냥 그룹으로 묵을 수도 있음. -->
+            <!-- card-group은 card-deck와 특성이 같음. 딱 하나 카드사이에 마진만 없다는 것이 다름 -->
+            <div class="card-group">
+                <div class="card">
+                    <img src="./images/moana01.jpg" alt="moana01" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 1</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana02.jpg" alt="moana02" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 2</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana03.jpg" alt="moana03" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 3</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana04.jpg" alt="moana04" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 4</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="./images/moana05.jpg" alt="moana05" class="card-img-top">
+                    <div class="card-body">                    
+                        <h4 class="card-title">MOANA 5</h4>
+                        <p class="card-text">Moana is very good movie.</p>
+                        <a href="#" class="btn btn-primary">GO MOANA SITE</a>
+                    </div>
+                </div>
+                
+            </div>
+            <hr>
+
+
+            
+        </div>
+
+                
+
+    </body>
+
+</html>

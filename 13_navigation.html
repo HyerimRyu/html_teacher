@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <title></title>
+        <!-- bootstrap library적용 : w3schools.com에서 링크 복사(CDN)-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <div class="container mt-3">
+
+            <!-- 간단한 수평 메뉴 버튼 구조 -->
+            <ul class="nav">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 가운데 정렬 -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 오른쪽 정렬 -->
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 수직배치 -->
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 탭버튼처럼 생긴 nav -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link active">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- active 메뉴에 배경 nav -->
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link active">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 균등사이즈 탭버튼 nav -->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                <li class="nav-item"><a href="" class="nav-link active">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- 탭버튼 선택마다 다른 콘텐츠자 보여지도록 -->
+
+            <!-- 1.탭버튼들 -->
+            <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">menu1</a></li>
+            </ul>
+
+            <!-- 2.탭버튼의 선택에 따라 보여질 패널들 -->
+            <div class="tab-content">
+                <!-- tab1 -->
+                <div class="tab-pane container active" id="tab1">
+                    <br>
+                    <h3>TAB #1</h3>
+                    <p>this is tab 1 pane.</p>
+                </div>
+
+                <!-- tab2 -->
+                <div class="tab-pane container" id="tab2">
+                    <br>
+                    <h3>TAB #2</h3>
+                    <p>this is tab 2 pane.</p>
+                </div>
+
+                <!-- tab3 -->
+                <div class="tab-pane container" id="tab3">
+                    <br>
+                    <h3>TAB #3</h3>
+                    <p>this is tab 3 pane.</p>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 1.탭버튼들 -->
+            <ul class="nav nav-pills" role="tablist">
+                <li class="nav-item"><a href="#tab4" class="nav-link active" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab5" class="nav-link" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab6" class="nav-link" data-toggle="tab">menu1</a></li>
+            </ul>
+
+            <!-- 2.탭버튼의 선택에 따라 보여질 패널들 -->
+            <div class="tab-content">
+                <!-- tab1 -->
+                <div class="tab-pane container active" id="tab4">
+                    <br>
+                    <h3>TAB #1</h3>
+                    <p>this is tab 1 pane.</p>
+                </div>
+
+                <!-- tab2 -->
+                <div class="tab-pane container fade" id="tab5">
+                    <br>
+                    <h3>TAB #2</h3>
+                    <p>this is tab 2 pane.</p>
+                </div>
+
+                <!-- tab3 -->
+                <div class="tab-pane container fade" id="tab6">
+                    <br>
+                    <h3>TAB #3</h3>
+                    <p>this is tab 3 pane.</p>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 네이게니션 바 -->
+            <nav class="navbar navbar-expand bg-primary">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 네이게니션 바 정렬 -->
+            <nav class="navbar navbar-expand bg-primary justify-content-end">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link text-white">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 네이게니션 바 로고/아이콘-->
+            <nav class="navbar navbar-expand bg-dark navbar-dark">
+                
+                <a href="" class="navbar-brand">Logo</a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <nav class="navbar navbar-expand bg-dark navbar-dark">
+                
+                <a href="" class="navbar-brand">
+                    <img src="./images/moana01.jpg" alt="" width="60px;">
+                </a>
+
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 모바일에서 메뉴를 삼선메뉴(햄버그아이콘)로 자동 변경되도록 -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                
+                <a href="" class="navbar-brand">
+                    <img src="./images/moana01.jpg" alt="" width="60px;">
+                </a>
+
+                <!-- 토글버튼/collsapible 버튼 (햄버그아이콘) -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 네비메뉴 -->
+                <div id="nav_menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <hr>
+
+            <!-- 네비바의 위치를 고정(브라우저상단 or 하단) -->
+            <nav class="navbar navbar-expand-sm bg-success navbar-dark fixed-bottom">
+                
+                <a href="" class="navbar-brand">
+                    <img src="./images/moana01.jpg" alt="" width="60px;">
+                </a>
+
+                <!-- 토글버튼/collsapible 버튼 (햄버그아이콘) -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 네비메뉴 -->
+                <div id="nav_menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <hr>
+
+            <!-- 네비바의 위치를 고정(브라우저상단 or 하단) -->
+            <nav class="navbar navbar-expand-sm bg-danger navbar-dark sticky-top">
+                
+                <a href="" class="navbar-brand">
+                    <img src="./images/moana01.jpg" alt="" width="60px;">
+                </a>
+
+                <!-- 토글버튼/collsapible 버튼 (햄버그아이콘) -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 네비메뉴 -->
+                <div id="nav_menu" class="collapse navbar-collapse">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                    </ul>
+                </div>
+                
+            </nav>
+            <hr>
+
+
+        </div>
+
+    </body>
+</html>

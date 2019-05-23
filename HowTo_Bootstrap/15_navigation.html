@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Navigation style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Nivigation : 특정 위치나 페이지로 이동하기 위한 컨트롤 컴포넌트 -->        
+
+        <div class="container mt-3">
+
+            <!-- 간단한 수평 메뉴 버튼 구조 -->
+            <!-- .nav : li들을 인라인요소들도 변환 -->
+            <!-- .nav-item : nav안에 항목들 구분 -->
+            <!-- .nav-link : 부트스트랩 스타일에 맞게 <a>요소의 밑줄 및 간격 자동 조절 -->
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+                <!-- disabled도 가능 -->
+                <li class="nav-item"><a href="#" class="nav-link disabled">menu4</a></li>
+            </ul>
+            <!-- 참고로 메뉴가 많으면 자동 줄바꿈이 됨 -->
+            <hr>
+
+            <!-- nav메뉴 가로축 포지션 -->
+            <ul class="nav justify-content-center">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+            </ul>
+            
+            <!-- nav메뉴 가로축 포지션 -->
+            <ul class="nav justify-content-end">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+
+            <!-- 수직배치 nav : vertical -->
+            <!-- CSS의 display:flex 레이아웃의 기법 [ flex레이아웃에서 기본배치방향은 수평[row:행] ] -->
+            <!-- flex-column == CSS에서 flex-direction:colunm -->
+            <ul class="nav flex-column">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+            </ul>
+            <hr>
+
+            <!-- tab버튼처럼 보이게 스타일링 : 마우스를 hover했을때 네모난 윤곽선의 상자가 그려짐 [ .nav-tabs ] -->
+            <ul class="nav nav-tabs">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link active">menu3</a></li>
+                <!-- .active를 통해 탭을 선택상태로 지정할 수 있음. JS로 이동시키는 코딩 가능-->
+            </ul>
+            <hr>
+
+            <!-- 배경색을 가진 탭 선택 상자 그려내기 [ .nav-tabs대신 .nav-pills(알약의 캡슐처럼) ] -->
+            <!-- active된 것도 네모난 박스가 그려짐 -->
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link active">menu3</a></li>
+                <!-- .active를 통해 탭을 선택상태로 지정할 수 있음. JS로 이동시키는 코딩 가능-->
+            </ul>
+            <hr>
+
+
+            <!-- 탭버튼들의 크기 균등분할 (너비를 모두 같게)-->
+            <ul class="nav nav-tabs nav-justified">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>                
+                <li class="nav-item"><a href="#" class="nav-link active">menu3</a></li>
+                <!-- .active를 통해 탭을 선택상태로 지정할 수 있음. JS로 이동시키는 코딩 가능-->
+            </ul>
+            <hr>
+
+
+            <!-- 네비와 드롭다운 메뉴 같이 사용하기 [ 요즘의 홈페이지의 상단에 자주 보이는 모습 ]-->
+            <ul class="nav">
+                <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>
+
+                <!-- 3번째 메뉴를 드롭다운으로 -->
+                <li class="nav-item dropdown">
+                    <!-- 1.드롭다운 토글 버튼 -->
+                    <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">menu3</a>
+                    <!-- 2.드롭다운될 메뉴들 -->
+                    <div class="dropdown-menu">
+                        <a href="#" class="dropdown-item">sub menu 1</a>
+                        <a href="#" class="dropdown-item">sub menu 2</a>
+                    </div>
+                </li>
+
+            </ul>
+            <hr>
+
+
+            <!-- 위의 네비들은 버튼을 눌러서 특정 페이지나 위치로 이동하는 곳에 많이 사용함 -->
+            <!-- 우리가 일반적으로 생각하는 탭에 따라 아래보여지는 콘텐츠가 달라지는 모양의 스타일도 가능함 -->
+
+            <!-- 1. 탭버튼들 -->
+            <ul class="nav nav-tabs" role="tablist"> 
+                <!-- dropdow이나 collapse처럼 data-toggle속성으로 tab을 지정 data-target으로 대상지정. 단, <a>요소라면 href속성에 식별자 지정 -->
+                <li class="nav-item"><a href="#tab1" class="nav-link active" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab2" class="nav-link" data-toggle="tab">menu2</a></li>
+                <li class="nav-item"><a href="#tab3" class="nav-link" data-toggle="tab">menu3</a></li>
+            </ul>
+
+            <!-- 2.탭버튼의 선택에 따라 보여질 패널들 -->
+            <div class="tab-content">
+                <!-- 2.1) tab1 패널 -->
+                <div class="container tab-pane active" id="tab1" >
+                    <br>
+                    <h3>TAB #1</h3>
+                    <p>this is home pane.</p>
+                </div>
+                <!-- 2.2) tab2 패널 -->
+                <div class="container tab-pane fade id="tab2">
+                    <br>
+                    <h3>TAB #2</h3>
+                    <p>this is home pane.</p>
+                </div>
+                <!-- 2.3) tab3 패널 -->
+                <div class="container tab-pane fade id="tab3">
+                    <br>
+                    <h3>TAB #3</h3>
+                    <p>this is home pane.</p>
+                </div>
+            </div>
+            <hr>
+
+
+            <!-- pill(알약) 스타일의 탭버튼들 -->
+            <!-- 1. 탭버튼들 -->
+            <ul class="nav nav-pills" role="tablist"> 
+                <!-- dropdow이나 collapse처럼 data-toggle속성으로 tab을 지정 data-target으로 대상지정. 단, <a>요소라면 href속성에 식별자 지정 -->
+                <li class="nav-item"><a href="#tab4" class="nav-link active" data-toggle="tab">menu1</a></li>
+                <li class="nav-item"><a href="#tab5" class="nav-link" data-toggle="tab">menu2</a></li>
+                <li class="nav-item"><a href="#tab6" class="nav-link" data-toggle="tab">menu3</a></li>
+            </ul>
+
+            <!-- 2.탭버튼의 선택에 따라 보여질 패널들 -->
+            <div class="tab-content">
+                <!-- 2.1) tab1 패널 -->
+                <div class="container tab-pane active" id="tab4" >
+                    <br>
+                    <h3>TAB #4</h3>
+                    <p>this is home pane.</p>
+                </div>
+                <!-- 2.2) tab2 패널 -->
+                <div class="container tab-pane fade" id="tab5">
+                    <br>
+                    <h3>TAB #5</h3>
+                    <p>this is home pane.</p>
+                </div>
+                <!-- 2.3) tab3 패널 -->
+                <div class="container tab-pane fade" id="tab6">
+                    <br>
+                    <h3>TAB #6</h3>
+                    <p>this is home pane.</p>
+                </div>
+            </div>
+            <hr>            
+
+        </div>
+        <hr>
+
+
+        <!-- 네비게이션 바 -->
+        <div class="container">
+
+            <!-- 기본적인 navigation bar : 각 페이지로 이동하는 메뉴를 가지고 있는 메뉴바 [ 일반적인 홈페이지가 가장 많이 사용되는 메뉴 바 ]-->
+            <!-- .navbar와 .navbar-expand를 추가하여 메뉴들이 옆으로 배치되도록 하고 배경색이 없으면 Bar느낌이 없어서 .bg-xxx를 추가하여 배경색 지정-->
+            <nav class="navbar navbar-expand bg-light">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 수직으로 배치 : 특별한 스타일이 아니라 위 에서 옆으로 배치하도록 했던 .navbar-expand를 제거하면 수직배치됨 -->
+            <nav class="navbar bg-light">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+
+            <!-- 네비게이션바 안에 메뉴들의 가운데 or 오른쪽 정렬 :  .justify-content-center or justify-content-end -->
+            <nav class="navbar navbar-expand bg-light justify-content-end">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>          
+
+
+
+            <!-- 네비게이션바에 로고/브랜드 글씨 넣기 -->
+            <!-- 네이게이션바의 배경색을 변경하면 기본 파란색 글씨가 안 어울림 -->
+            <!-- 각 요소마다 일일이 text-white를 주는 것 불편하니 .navbar-dark를 추가하여 어두운 색상의 navBar라고 지정하면 자동 하얀글씨(완전 하얀색은 아님)가 됨.-->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- 로고(브랜드) 넣기 [보통 로고를 클릭하면 홈페이지가 열리는 경우가 많으므로 <a>요소로] : .navbar-brand를 추가하여 navBar에 알맞은 모양으로 스타일링 -->
+                <a href="#" class="navbar-brand">Logo</a>
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 그림으로 로고 디자인 가능 -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- 로고(브랜드) 넣기 [보통 로고를 클릭하면 홈페이지가 열리는 경우가 많으므로 <a>요소로] : .navbar-brand를 추가하여 navBar에 알맞은 모양으로 스타일링 -->
+                <a href="#" class="navbar-brand">
+                    <img src="./images/moana01.jpg" alt="moana01" style="width: 60px;">
+                </a>
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+
+            <!-- 요즘 많이보이는 collapsing 네비게이션 바 : 삼선아이콘 메뉴를 누르면 메뉴들이 보여지는 모양 -->
+            <!-- collapse수업시간에 배웠던 것과 연결 -->
+            <!-- 주의!!! .navbar-expand는 반드시 제거해야함-->
+            <!-- 참고로 반응형으로 모바일에서는 삼선, 데스크탑에서는 그냥 메뉴로 나오고 싶다면 navbar-expand-sm로 지정해주면 됨 -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- 로고(브랜드) 넣기 [보통 로고를 클릭하면 홈페이지가 열리는 경우가 많으므로 <a>요소로] : .navbar-brand를 추가하여 navBar에 알맞은 모양으로 스타일링 -->
+                <a href="#" class="navbar-brand">Logo</a>
+
+                <!-- 토글버튼/collapsibe 버튼 [아디다스 삼선아이콘 모양] -->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#nav_menu">
+                    <!-- 버튼에 이미지로 넣어도 되고.. 부트스트랩이 삼선모양을 CSS로 그려낸 스타일을 사용할 수도 있음. -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- 네비메뉴 -->
+                <!-- 네비메뉴를 collapse 되도록 .collapse div로 지정  -->
+                <div id="nav_menu" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                    </ul>
+                </div>
+                
+                <!-- .show를 추가하면 처음 시작인 열려있는 상태임 -->
+                <!-- <div id="nav_menu" class="collapse navbar-collapse show">
+                    <ul class="nav navbar-nav">
+                        <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                    </ul>
+                </div> -->
+            </nav>
+            <hr>
+
+
+            <!-- 드롭다운메뉴가 있는 네비게이션 바 -->
+            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                <!-- 로고(브랜드) 넣기 [보통 로고를 클릭하면 홈페이지가 열리는 경우가 많으므로 <a>요소로] : .navbar-brand를 추가하여 navBar에 알맞은 모양으로 스타일링 -->
+                <a href="#" class="navbar-brand">Logo</a>
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+
+                    <!-- 여기를 드롭다운메뉴로 -->
+                    <!-- .dropdown을 추가하지 않으며 서브메뉴가 네비게이션바의 왼쪽 끝에 붙어버림 -->
+                    <li class="nav-item dropdown">
+                        <!-- 드롭다운 버튼 -->
+                        <a href="#submenu" class="nav-link dropdown-toggle" data-toggle="dropdown">menu3</a>
+                        <!-- 드롭다운 메뉴 -->
+                        <div id="submenu" class="dropdown-menu">
+                            <a href="" class="dropdown-item">subMenu 1</a>
+                            <a href="" class="dropdown-item">subMenu 2</a>
+                            <a href="" class="dropdown-item">subMenu 3</a>
+                        </div>
+
+                    </li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- Search폼을 가지고 있는 네비게이션 바 -->
+            <!-- 코드모두 작성후 로고는 왼쪽, form요소는 오른쪽에 배치하고 싶다면... justify-content-between을 추가하여 여백이 남는 부분은 요소들 사이로 해주면 자동으로 좌우 끝으로 붙음. 나중에 추가로 학습예정-->
+            <nav class="navbar navbar-expand bg-success navbar-dark justify-content-between">
+                <!-- 로고(브랜드) 넣기 [보통 로고를 클릭하면 홈페이지가 열리는 경우가 많으므로 <a>요소로] : .navbar-brand를 추가하여 navBar에 알맞은 모양으로 스타일링 -->
+                <a href="#" class="navbar-brand">Logo</a>
+
+                <!-- 검색어 입력하면 특정서버 페이지(.php)를 실행하는 경우가 많으므로.. form요소로 -->
+                <!-- form요소안에 있는 것들을 인라인으로(밑에 input요소에 .form-control를 주면 block요소가 되어버리므로...) 하기 위한 .form-inline속성 추가 -->
+                <form action="" method="GET" class="form-inline">
+                    <!-- 아직 배우진 않았지만 input요소의 스타일을 부트스트랩스럽게 하기위해 .form-control추가 [ 주의!!! .form-control는 input요소의 widht:100%로 만들기 때문에 버튼이 다음줄로 내려감]-->
+                    <input type="text" placeholder="input text" class="form-control mr-1">
+                    <button class="btn btn-dark" type="submit">Search</button>
+                </form>
+            </nav>
+            <hr>
+
+
+            <!-- 브라우저 상단에 고정되어 있는 네비게이션바 [ .fixed-top ] 스크롤을 해도 위에 고정되어 있음.-->
+            <nav class="navbar navbar-expand bg-primary navbar-dark fixed-top">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+            <!-- 브라우저 하단에 고정되어 있는 네비게이션바 [ .fixed-bottm ] 스크롤을 해도 위에 고정되어 있음.-->
+            <nav class="navbar navbar-expand bg-warning fixed-bottom">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+
+
+            <!-- 처음에는 이 위치에 배치되어 있다가 화면이 스크롤되어 이 네비게이션이 안보이게 되는 상황이 되면 영역(div: container [브라우저 아님])의 상단에 붙어있는 네비게이션 -->
+            <nav class="navbar navbar-expand bg-danger sticky-top">
+                <!-- 네비메뉴 -->
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu3</a></li>
+                </ul>
+            </nav>
+            <hr>
+            <!-- 밑에 아무것도 없어서 테스트가 안되니 스크롤이 될 수 있도록 긴 글을 추가 및 이미지 추가 -->
+            <!--[주의!! 위의 fixed-top예제의 네비게이션바에 가려지므로 테스트할 때 위 예제 잠시 삭제 ] -->
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est, quaerat aut corporis eaque cumque error dolorum? Error sequi, nobis non dignissimos rem blanditiis impedit deleniti natus obcaecati harum ut!
+            </p>
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore est, quaerat aut corporis eaque cumque error dolorum? Error sequi, nobis non dignissimos rem blanditiis impedit deleniti natus obcaecati harum ut!
+            </p>
+            <img src="./images/moana01.jpg" alt="moana01">
+
+
+
+
+            <!-- 굳이 수업할 필요는 없음. -->
+            <!-- 필요하다면 네비바 안에 그냥 글씨를 추가하는 경우도 있음.. 스타일은 맞추어서.. -->            
+            <!-- <nav class="navbar navbar-expand bg-dark navbar-dark">                
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="" class="nav-link">menu1</a></li>
+                    <li class="nav-item"><a href="" class="nav-link">menu2</a></li>                    
+                </ul>
+               
+                <span class="navbar-text"> Just text</span>
+            </nav>
+            <hr> -->
+        </div>
+        <hr>
+
+
+
+
+
+    </body>
+
+</html>

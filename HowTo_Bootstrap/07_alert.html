@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alert style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- 특정 글씨 영역을 눈에 띄는 영역으로 보이도록 -->
+        <div class="container">
+            <p class="alert alert-primary">This is alert message.</p>
+            <p class="alert alert-secondary">This is alert message.</p>
+            <p class="alert alert-success">This is alert message.</p>
+            <p class="alert alert-info">This is alert message.</p>
+            <p class="alert alert-warning">This is alert message.</p>
+            <p class="alert alert-danger">This is alert message.</p>                
+            <p class="alert alert-light">This is alert message.</p>
+            <p class="alert alert-dark">This is alert message.</p>
+        </div>
+        <hr>
+
+        <!-- alert영역안에 link 넣기 : 그냥 넣으면 색상이 무주건 <a>요소의 기본인 파란색임 -->
+        <!-- 배경색에 의해 가독성이 적다고 느낀다면...부트스트랩에서는 그냥 굵은 글씨의 검은색을 권장함. .alert-link스타일 -->
+        <div class="container">
+            <p class="alert alert-primary">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-secondary">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-success">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-info">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-warning">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-danger">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>                
+            <p class="alert alert-light">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+            <p class="alert alert-dark">This is alert message. <a href="#" class="alert-link">READ ME</a> </p>
+        </div>
+        <hr>
+
+
+        <!-- 경고메세지는 특정상화에 보여주고 이를 사용자가 인지 하였다면 더이상 이 메세지를 보지 않고 끄기를 원할 수 있음. -->
+        <!-- 즉, 경고영역에 close버튼(x)늘 넣을 수 있음 -->
+        <div class="container">            
+            <p class="alert alert-primary">This is alert message. <button class="close">x</button></p>
+            
+            <!-- x버튼은 있으나 눌러도 경고영역이 없어지지 않음... 이때 추가 속성 data-dismiss="alert" : alert를 종료하겠다는 설정-->
+            <p class="alert alert-secondary">This is alert message. <button class="close" data-dismiss="alert">x</button></p>
+
+            <!-- x라는 글씨를 직접 기입해도 되지만 close모양을 위한 Entity문자가 있음. (ex. &nbsp;  ) : 이게 좀더 x모양이 보기 좋음..-->
+            <p class="alert alert-success">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>
+            <p class="alert alert-info">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>
+            <p class="alert alert-warning">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>
+
+            <!-- 너무 팍팍 사라지는 느낌이라면... 없어질 때 아주 짧게 fade 아웃되는 효과를 줄수 있음. [ .fade  .show   둘다 반드시 있어야 함]  -->
+            <p class="alert alert-danger fade show">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>                
+            <p class="alert alert-light fade show">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>
+            <p class="alert alert-dark fade show">This is alert message. <button class="close" data-dismiss="alert">&times;</button></p>
+        </div>
+        <!-- x버튼을 누르면 그 요소가 없어지는 것을 볼 수 있음. -->
+        <hr>
+
+    </body>
+</html>

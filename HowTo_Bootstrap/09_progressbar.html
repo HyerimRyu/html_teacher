@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Progressbar style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        <h2>Progressbar TEST</h2>
+        <hr>
+        <!-- 기본 적인 막대바 형태의 프로그래스 바 -->
+        <div class="container">
+
+            <!-- 프로그래스바 박스 -->
+            <div class="progress">
+                <!-- 프로그래스 막대바 -->
+                <!-- 그냥 보명 회식만 있고 게이지가 보이지 않음. 즉, 프로그래스 막대바가 보이지 않음-->
+                <!-- 이유는 가로사이즈가 0 이라서임 -->
+                <!-- 스타일 속성을 통해 width값 지정 : 가급적 %권장!! -->
+                <div class="progress-bar" style="width: 40%;"></div>
+            </div>
+            <hr>
+
+            <!-- 프로그래스바 박스의 높이 사이즈도 지정 가능-->
+            <div class="progress" style="height:20px;">
+                <div class="progress-bar" style="width:70%;"></div>
+            </div>
+            <hr>
+
+            <!-- 프로그래스바 박스의 높이 사이즈도 지정 가능-->
+            <div class="progress" style="height:60px;">
+                <div class="progress-bar" style="width:70%;"></div>
+            </div>
+            <hr>
+
+            <!-- 프로그래스막대에 라벨값 표시도 가능함-->
+            <div class="progress" style="height:60px;">
+                <div class="progress-bar" style="width:70%;">70%</div>
+            </div>
+            <hr>
+
+            <!-- 당연히 색상도 가능함 .bg-XXXXXX [항상하던 그 방식]-->
+            <div class="progress">
+                <div class="progress-bar bg-primary" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-secondary" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-success" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-info" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-warning" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-danger" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-light" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-dark" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-white" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+
+
+            <!-- 줄무늬가 있는 프로그래스바 :  .progress-bar-striped -->
+            <div class="progress">
+                <div class="progress-bar bg-primary progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-secondary progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-light progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-dark progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-white progress-bar-striped" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+
+
+            <!-- 애니메이션이 되는 줄무늬 -->
+            <div class="progress">
+                <div class="progress-bar bg-primary progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-secondary progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-success progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-info progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-danger progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-light progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-dark progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+            <div class="progress">
+                <div class="progress-bar bg-white progress-bar-striped progress-bar-animated" style="width: 50%;">50%</div>
+            </div>
+            <hr>
+
+
+            <!-- 하나의 프로그래스바안에 여러개의 프로그래스막대바 삽입가능 -->
+            <div class="progress" style="height: 30px;">
+                <div class="progress-bar bg-success" style="width:40%">Free Space</div>
+                <div class="progress-bar bg-warning" style="width:10%">Warning</div>
+                <div class="progress-bar bg-danger" style="width:20%">Danger</div>            
+            </div>
+            <hr>
+
+        </div>
+        <hr>
+
+
+
+    </body>
+
+</html>

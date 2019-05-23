@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>       
+       
+    </head>
+
+    <body>
+
+       
+        <div class="container mt-3" >
+
+            <!-- 안에 있는 요소들의 스타일조정 : display:flex; [ .d-flex ] -->
+            <!-- flex를 지정하면 chile요소들의 width가 조정됨 [ wrap-content : inline으로 ] -->
+            <div class="text-white d-flex bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+            <!-- d-inline-flex를 주면 본인도 inline이 됨 -->
+            <div class="text-white d-inline-flex bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+            <!-- 자식요소들의 배치방향을 수평(flex-row)으로. [ 기본값 . 주나 안주나 똑같음 ] -->
+            <div class="text-white d-flex flex-row bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+           
+
+            <!-- 가로로 배치되는 순서를 거꾸로..  -->
+            <div class="text-white d-flex flex-row-reverse bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+            <!-- 배치방향을 수직[flex-column[으로. -->
+            <div class="text-white d-flex flex-column bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+            <!-- 배치방향을 수직이면서 거꾸로... -->
+            <div class="text-white d-flex flex-column-reverse bg-dark p-3">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+
+            <!-- 요소들의 정렬 [ Justify Content : flex의 배치 방향[row/colum]] -->
+            <!-- flex-row 일때는 수평축의 정렬/ flex-column일때는 수직축의 정렬 -->
+            <div class="text-white d-flex flex-row bg-dark p-3 justify-content-center">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 요소들 사이사이 공백 간격을 균등히 넓히기 [ justify-content-between ]-->
+            <div class="text-white d-flex flex-row bg-dark p-3 justify-content-between">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 요소들 둘러싸는 좌우 여백을 균등하게 justify-content-around -->
+            <div class="text-white d-flex flex-row bg-dark p-3 justify-content-around">
+                <div class="bg-info p-3 border border-white" >aaa</div>
+                <div class="bg-success p-3 border border-white">bbb</div>
+                <div class="bg-danger p-3 border border-white">ccc</div>
+            </div>
+            <hr>
+
+            <!-- 수직배치 : flex-column , 배치정렬 확인을 위해 높이값을 크게 400px로 -->
+            <div class="text-white d-flex flex-column bg-dark p-3" style="height: 400px;">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 수직배치 / 가운데 정렬 -->
+            <div class="text-white d-flex flex-column bg-dark p-3 justify-content-center" style="height: 400px;">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 수직배치 / between 정렬 -->
+            <div class="text-white d-flex flex-column bg-dark p-3 justify-content-between" style="height: 400px;">
+                <div class="bg-info p-3">aaa</div>
+                <div class="bg-success p-3">bbb</div>
+                <div class="bg-danger p-3">ccc</div>
+            </div>
+            <hr>
+
+
+            <!--균등분할 -->
+            <!-- 수직배치 / 가운데 정렬 -->
+            <div class="d-flex">
+                <!-- 남는 공간 다 먹어 같은 느낌 [ .flex-grow-1 이 있으나 기능이 같아보임 ]-->
+                <div class="p-2 bg-info flex-fill">aaa</div>
+                <div class="p-2 bg-success flex-fill">bbb</div>
+                <div class="p-2 bg-warning">ccc</div>
+            </div>
+            <hr>
+
+            <!-- 배치순서 지정 -->
+            <div class="d-flex">
+                <div class="p-2 bg-info order-2">aaa</div>
+                <div class="p-2 bg-success order-3">bbb</div>
+                <div class="p-2 bg-warning order-1">ccc</div>
+            </div>
+            <hr>
+
+            <!-- Auto Margin -->
+            <!-- 사이 간격지정을 위한 마진 중 auto -->
+            <div class="d-flex bg-dark p-2">                
+                <div class="p-2 bg-info mr-auto">aaa</div>
+                <!-- 위 요소에 mr-auto가(margin right) 있으므로 오른쪽 끝으로 아래 요소들을 밀어버림 -->
+                <div class="p-2 bg-success">bbb</div>
+                <div class="p-2 bg-warning">ccc</div>
+            </div>
+            <hr>
+            <!-- 사이 간격지정을 위한 마진 중 auto -->
+            <div class="d-flex bg-dark p-2">                
+                <div class="p-2 bg-info">aaa</div>
+                <div class="p-2 bg-success mr-auto">bbb</div>                
+                <!-- 위 요소에 mr-auto가(margin right) 있으므로 오른쪽 끝으로 아래 요소들을 밀어버림 -->
+                <div class="p-2 bg-warning">ccc</div>
+            </div>
+            <hr>
+            <!-- 위와 같은 모양을 ml(margin-left)를 사용하여 지정 -->
+            <div class="d-flex bg-dark p-2">                
+                <div class="p-2 bg-info">aaa</div>
+                <div class="p-2 bg-success">bbb</div>                
+                <!-- 아래 요소에 ml-auto가(margin left) 있으므로 왼쪽이 붕 뜨면서 오른쪽 끝으로 아래 요소들이 밀려버림 -->
+                <div class="p-2 bg-warning ml-auto">ccc</div>
+            </div>
+            <hr>
+
+
+
+            <!-- 반응형을 위한 flex-wrap -->
+
+            <!-- 그냥 많이 놓으면 옆으로만 놓이면서 container에 의해 잘려보임  -->
+            <div class="text-white d-flex bg-dark p-3">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+
+            <!-- .flex-wrap추가 [ .flex-wrap-reverse도 해볼것 ] -->
+            <div class="text-white d-flex flex-wrap bg-dark p-3">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+
+
+
+            <!-- Align Content : Justify-Content-* 처럼 정렬인데 수직/수평 축만 정반대..  -->
+            <!-- 즉, 수평배치인 flex-row일때는 수직축의 정렬,  수직배치인 flex-column일때는 수평축 정렬 -->
+
+            <!-- 먼저 수평배치 : flex-row[default] (justify-Content-*는 수평축을 정렬) -->
+            <!-- 이때 align-content-* 는 수직축 배치 (테스트를 위해 높이값 지정) -->
+
+            <!-- 1) align-content를 안주면 안에 있는 요소들의 높이가 자동 늘어남 -->
+            <div class="text-white d-flex flex-wrap bg-dark p-3" style="height: 200px;">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 2) align-content-start를 주면 안에 있는 요소들의 높이가 wrap이 되고 위(top)에 정렬됨 : 수평배치[flex-row]여서. [flex-wrap 속성은 반드시 있어야함] -->
+            <div class="text-white d-flex flex-wrap bg-dark p-3 align-content-start" style="height: 200px;">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 3) align-content-center를 주면 안에 있는 요소들의 높이가 wrap이 되고 수직 가운데에 정렬됨 : 수평배치[flex-row]여서. [flex-wrap 속성은 반드시 있어야함] -->
+            <div class="text-white d-flex flex-wrap bg-dark p-3 align-content-center" style="height: 200px;">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+            <!-- 3) align-content-between 주면 안에 있는 요소들의 높이가 wrap이 되고 수직배치의 요소 사이 간격이 정렬됨 : 수평배치[flex-row]여서. [flex-wrap 속성은 반드시 있어야함] -->
+            <div class="text-white d-flex flex-wrap bg-dark p-3 align-content-between" style="height: 200px;">
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+                <div class="border border-white p-3">aaa</div>
+                <div class="border border-white p-3">bbb</div>
+                <div class="border border-white p-3">ccc</div>
+            </div>
+            <hr>
+
+
+            <!-- Align Self -->
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">Flex item 1</div>
+                <div class="p-2 border align-self-start">Flex item 2</div>
+                <div class="p-2 border">Flex item 3</div>
+            </div>
+            <hr>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">Flex item 1</div>
+                <div class="p-2 border align-self-end">Flex item 2</div>
+                <div class="p-2 border">Flex item 3</div>
+            </div>
+            <hr>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">Flex item 1</div>
+                <div class="p-2 border align-self-center">Flex item 2</div>
+                <div class="p-2 border">Flex item 3</div>
+            </div>
+            <hr>
+            <div class="d-flex bg-light" style="height:150px">
+                <div class="p-2 border">Flex item 1</div>
+                <div class="p-2 border">Flex item 2</div>
+                <div class="p-2 border">Flex item 3</div>
+            </div>
+            <hr>
+
+
+            
+
+        </div>
+        <hr>
+        
+    </body>
+
+</html>

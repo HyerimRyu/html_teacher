@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Image style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <style>
+            img{ width: 300px; height: 200px;}
+        </style>
+        
+        <div class="container">
+            <img src="./images/moana01.jpg" alt="moana01">
+        </div>
+        <hr>
+
+        <!-- 부트스트랩을 이용한 이미지 모양 꾸미기 3종류 : rounded conders, circle, thumbnail -->
+        <div class="container">
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded">
+        </div>
+        <hr>
+
+        <div class="container">
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded-circle">
+        </div>
+        <hr>
+
+        <div class="container">
+            <img src="./images/moana01.jpg" alt="moana01" class="img-thumbnail">
+        </div>
+        <hr>
+
+        <!-- 이미지 정렬 -->
+        <div class="container">
+            <!-- float을 사용하는 기법 -->
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded float-left">
+            <img src="./images/moana02.jpg" alt="moana01" class="rounded float-right">
+        </div>
+        <!--주의!!! float을 사용하면 해당요소가 붕 떠있있는 형태라서 다음 요소들이 당겨서 올라오는 문제가 생기는 것을 다 알고 있죠!! 그래서 아래에 있는 <h2>가 당겨올라 옴-->
+        <h2>this is heading element</h2>
+
+        <!-- 위 float의 영향을 없애기 위해!!! -->
+        <div style="clear: both;"></div>
+        <hr>
+
+        <!-- 가운데 정렬 -->
+
+        <!-- 방법1. 부모요소에게 콘텐츠의 정렬을 가운데로.. [ 이 방법을 사용하면 다른 요소들도 가운데로 온다는 것을 주의 ] -->
+        <div class="container text-center">
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded">
+        </div>
+        <hr>
+
+        <!-- 방법2. <img>요소 자체를 가운데로.. -->        
+        <div class="container">
+            <!-- style지정방식 :  -->
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded" style="display: block; margin: auto;">
+            <!-- 부트스트랩 -->
+            <img src="./images/moana01.jpg" alt="moana01" class="rounded d-block mx-auto">
+        </div>
+        <hr>
+
+        <!-- 이미지 최대가로사이즈 100%되도록.. : 화면이 작은 모바일폰에서 그림이 잘리지 않도록-->
+        <!-- .img-fluid == max-width:100% , height:auto; -->
+        <img src="./images/moana01.jpg" alt="moana01" class="img-fluid">
+        
+        <hr>
+
+        <!-- 별외!!!! 커다란 회색박스 : 제목영역같은 느낌 : 높이는 안에 내용물 만큼 자동으로 커짐!!-->
+        <div class="jumbotron text-center">
+            <h2>Bootstrap Test</h2>
+            <p>Bootstrap is the most popular library and framework.</p>
+        </div>
+        <!-- 웹페이지의 시작화면을 만들 때 헤더영역으로 사용하지 좋은 스타일 -->
+
+
+
+
+    </body>
+</html>

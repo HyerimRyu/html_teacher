@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Input Form style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <div class="container mt-3">
+
+            <!-- 부트스트랩을 안했을 때 -->            
+            <input type="text" placeholder="input text">
+            <textarea name="" id="" cols="30" rows="3"></textarea>
+            <hr>
+
+            <!-- 부트스트랩 스타일 적용 : .form-control 추가-->
+            <input type="text" placeholder="input text" class="form-control">
+            <br>
+            <textarea name="" id="" rows="3" class="form-control"></textarea>
+            <hr>
+
+            <!-- 부트스트랩인 기본적으로 모두 widht:100%이므로 inline으로 하고 싶다면 [ .form-inline 추가 ] -->
+            <div class="form-inline">
+                <input type="text" placeholder="input text" class="form-control">
+                <textarea name="" id="" rows="3" class="form-control ml-2"></textarea>
+            </div>
+            <hr>
+
+            <!-- label과 함게 사용[라벨을 클릭해도 input요소 선택] -->
+            <label for="usr">Name:</label>
+            <input type="text" class="form-control" id="usr">
+
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+            <hr>
+            <!-- 그냥 2개 그룹을 작성하면 사이에 공백이 없어서 보기 좋지 않음 -->
+            
+            <!-- 각 그룹을 div로 감싸고 .form-group을 주면 공백이 자연스럽게 주어짐 -->
+            <div class="form-group">
+                <label for="usr">Name:</label>
+                <input type="text" class="form-control" id="usr">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd">
+            </div>
+            <hr>
+
+
+            <!-- 그냥 select -->
+            <div class="form-group">
+                <select name="" id="">
+                    <option value="">aa</option>
+                    <option value="">bb</option>
+                    <option value="">cc</option>
+                </select>
+            </div>
+
+            <!-- 부트스트랩 select -->
+            <div class="form-group">
+                <select name="" id="" class="form-control">
+                    <option value="">aa</option>
+                    <option value="">bb</option>
+                    <option value="">cc</option>
+                    <option value="">dd</option>
+                </select>
+            </div>
+            <!-- multiple choice 부트스트랩 select -->
+            <!-- 여러개 선택할 때는 ctrl키 이용 -->
+            <div class="form-group">
+                <select name="" id="" class="form-control" multiple>
+                    <option value="">aa</option>
+                    <option value="">bb</option>
+                    <option value="">cc</option>
+                    <option value="">dd</option>
+                </select>
+            </div>
+            <hr>
+
+            <!-- input form size [ sm/lg] -->
+            <input type="text" class="form-control form-control-sm" placeholder="input text">
+            <input type="text" class="form-control" placeholder="input text">
+            <input type="text" class="form-control form-control-lg" placeholder="input text">
+            <hr>
+
+
+            <!-- 윤곽선이 없은 input스타일 -->
+            <input type="text" name="" id="" class="form-control-plaintext" placeholder="touch me">
+            <hr>
+            
+        </div>
+        <hr>
+
+        <div class="container">
+
+            <!-- input 그룹핑하기 -->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="input text">
+                <input type="text" class="form-control" placeholder="input text">
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <hr>
+
+            <!-- 이런식으로 활용가능 -->
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Last name">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <hr>
+
+            <!-- 라벨같은 역할의 추가 가능 -->
+            <div class="input-group">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend"><span class="input-group-text">NAME</span></div>
+                <input type="text" class="form-control" placeholder="Last name">
+                <input type="text" class="form-control" placeholder="First name">
+            </div>
+            <hr>
+
+            <!-- 뒤에 덧불일 수도 있음. -->
+            <div class="input-group">  
+                
+                <input type="text" class="form-control" placeholder="Email address">
+                <!-- 뒤에 덧불일 수도 있음. -->
+                <div class="input-group-append">
+                    <span class="input-group-text">@google.com</span>
+                </div>
+            </div>
+            <hr>
+
+            <!-- 여러개를 붙일수도 있음. -->
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">One</span>
+                    <span class="input-group-text">Two</span>
+                    <span class="input-group-text">Three</span>
+                </div>
+                
+                <input type="text" class="form-control">
+            </div>
+            <hr>
+
+            <!-- 체크박스나 라디오버튼을 붙일 수도 있음. -->
+            <div class="input-group">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                            <input type="checkbox">
+                    </span>                    
+                </div>
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <div class="input-group mt-2">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend">
+                    <span class="input-group-text">
+                            <input type="radio">
+                    </span>                    
+                </div>
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <hr>
+
+            <!-- 일반 버튼 삽입과 색상변경 및 윤곽선 스타일-->
+            <div class="input-group">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend">
+                    <button class="btn btn-primary">button</button>
+                </div>
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <hr>
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="input text">
+                <!-- 라벨역할 -->
+                <div class="input-group-append">
+                    <button class="btn btn-success">ok</button>
+                    <button class="btn btn-danger">cancel</button>
+                </div>                
+            </div>
+            <hr>
+
+            <!-- 윤곽선 -->
+            <div class="input-group">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-primary">button</button>
+                </div>
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <hr>
+
+            <!-- 드롭다운 -->
+            <div class="input-group">
+                <!-- 라벨역할 -->
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-primary dropdown-toggle" data-toggle="dropdown" data-target="#drop">dropdown button</button>
+                    <div class="dropdown-menu">
+                        <a href="" class="dropdown-item">aaa</a>
+                        <a href="" class="dropdown-item">bbb</a>
+                        <a href="" class="dropdown-item">ccc</a>
+                    </div>
+                </div>
+                <input type="text" class="form-control" placeholder="input text">
+            </div>
+            <hr>
+
+            <!-- 브라우저마다 조금씩 다른 모양을 가진 checkbox나 radio버튼같은 모양을 영향받지 않고 항상 같은 모양으로 스타일링하기 -->
+            <!-- .custom이 앞에 붙으면 됨. -->
+
+            <!-- checkbox -->
+            <div class="custom-control custom-checkbox">
+                <input type="checkbox" class="custom-control-input" id="cb1" name="">
+                <label class="custom-control-label" for="cb1">Apple</label>
+            </div>
+            <hr>
+
+            <!-- radio -->
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="rb1" name="rg">
+                <label class="custom-control-label" for="rb1">Male</label>
+            </div>
+            <div class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="rb2" name="rg">
+                <label class="custom-control-label" for="rb2">Female</label>
+            </div>
+            <hr>
+
+            <!-- inline radio -->
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="rb3" name="rg2">
+                <label class="custom-control-label" for="rb3">Male</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" class="custom-control-input" id="rb4" name="rg2">
+                <label class="custom-control-label" for="rb4">Female</label>
+            </div>
+            <hr>
+
+            <!-- switch -->
+            <div class="custom-control custom-switch">
+                <input type="checkbox" class="custom-control-input" id="switch">
+                <label for="switch" class="custom-control-label">network</label>
+            </div>
+            <hr>
+
+            <!-- selet : 화살표가 위아래모양으로 바뀜-->
+            <div class="form-group">
+                <select name="" id="" class="custom-select">
+                    <option value="">aa</option>
+                    <option value="">bb</option>
+                    <option value="">cc</option>
+                    <option value="">dd</option>
+                </select>
+            </div>
+            <hr>
+
+            <!-- range -->
+            <input type="range" name="" id="" class="custom-range">            
+            <hr>
+
+            <!-- file 선택 input type -->
+            <div class="custom-file">
+                <input type="file" name="" id="fi" class="custom-file-input">
+                <label for="fi" class="custom-file-label" id="flabel">Choose file</label>
+            </div>
+
+            <!-- 애석하게 위 처럼 .custom-file-input스타일을 적용하면 자동으로 선택된 값이 보이지 않기에 아래처럼 JS로 직접 처리해주어야 함.-->
+            <script>
+                document.querySelector("#fi").onchange = function(){                    
+                    document.querySelector("#flabel").textContent = this.files[0].name;
+                }
+            </script>
+            
+            
+
+            
+
+            
+
+
+
+
+
+
+
+        </div>
+        <hr>
+
+    </body>
+
+</html>

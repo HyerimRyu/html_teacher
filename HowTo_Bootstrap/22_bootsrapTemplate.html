@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bootstrap Template Page</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>       
+       
+    </head>
+
+    <body> 
+
+        <!-- 부트스트랩을 통해 웹페이지를 개발할 때 많이 쓰이는 구조를 탬플릿을 놓고 사용 -->
+
+
+        <!-- 1. Header영역 -->
+        <!-- .jumbostron는 기본 bottom마진이 있어서 이를 제거[ mb-0 : margin-bottom] -->
+        <header class="jumbotron text-center mb-0 bg-info">
+            <h1>Bootstrap Template Page</h1>
+            <p>This is bootstrap template page.</p>
+        </header>
+
+        <!-- 2. Nav영역 -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <div class="container">
+                <!-- 2.1 Logo 글씨 or 이미지 -->
+                <a href="#" class="navbar-brand">Logo</a>
+                <!-- 2.2 모바일화면일 때 오른쪽 끝에 삼선아이콘 모양으로 나오는 collapse 네비메뉴 토글버튼-->
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+                <!-- 2.3 네비메뉴 -->
+                <div class="collapse navbar-collapse" id="navMenu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="#" class="nav-link">menu1</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">menu2</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link">menu3</a></li>
+                    </ul>
+                </div>   
+            </div>                    
+        </nav>
+
+        <!-- 3. Content영역 -->
+        <div class="container mt-4" >
+            <!-- col을 통해 왼쪽 4, 나머지 8사이즈의 레이아웃 배치하고자 함 -->
+            <!-- col-sm-* : sm지정이 없으면 반응형이 안되고 무조건 4-8이됨 -->
+            <div class="row">
+                <aside class="col-sm-4">
+                    <h2>My Information</h2>
+                    <h5>Profile image:</h5>
+                    <img src="./images/moana01.jpg" alt="" style="width: 100%;" class="rounded">
+                    <p>Some text about me.</p>
+
+                    <h5>Some Links</h5>
+                    <p>My portfolio</p>
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action"><a href="#">Link 1</a></li>
+                        <li class="list-group-item list-group-item-action"><a href="#">Link 2</a></li>
+                        <li class="list-group-item list-group-item-action"><a href="#">Link 3</a></li>
+                    </ul>
+                    <!-- 반응형 일때만 그려내라(즉, sm사이즈가 되면 hr이 그려짐, 그렇지 않을 때는 그려지지 않음) -->
+                    <hr class="d-sm-none">
+                </aside>
+
+                <article class="col-sm-8">
+                    <h2>Main Article Title</h2>
+                    <h5>This is first article.</h5>
+                    <img src="./images/moana04.jpg" alt="moana04" style="max-width: 100%;" class="rounded">
+                    <p>Some text...</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure molestias, laborum natus deleniti accusamus ea eligendi eum facere dolores ducimus vero. Fuga a doloremque itaque iure mollitia rerum necessitatibus sequi?</p>
+                    <br>
+
+                    <h2>Second Article Title</h2>
+                    <h5>This is second article.</h5>
+                    <img src="./images/moana05.jpg" alt="moana04" style="max-width: 100%;" class="rounded">
+                    <p>Some text...</p>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure molestias, laborum natus deleniti accusamus ea eligendi eum facere dolores ducimus vero. Fuga a doloremque itaque iure mollitia rerum necessitatibus sequi?</p>
+
+
+                </article>
+            </div>
+
+        </div>
+
+        <!-- 4. Fotter영역 -->
+        <footer class="jumbotron text-center">
+            <h4>Footer</h4>
+            <p>Copyright &copy; 2019 Desinged by mrhi android class</p>
+
+        </footer>
+
+
+
+       
+        
+    </body>
+
+</html>

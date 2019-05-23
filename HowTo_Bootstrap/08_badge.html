@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Badge style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+        
+        <!-- badge [ 뱃지 ] 스타일링 : [ <span>요소 사용.. inline으로 삽입되도록 ] -->
+        <div class="container">
+            <h1>Example heading <span class="badge badge-primary">New</span></h1>
+            <h2>Example heading <span class="badge badge-secondary">New</span></h2>
+            <h3>Example heading <span class="badge badge-success">New</span></h3>
+            <h4>Example heading <span class="badge badge-info">New</span></h4>
+            <h5>Example heading <span class="badge badge-warning">New</span></h5>
+            <h6>Example heading <span class="badge badge-danger">New</span></h6>
+            <p>Expmaple paragraph <span class="badge badge-light">1</span></p> 
+            <p>Expmaple paragraph <span class="badge badge-dark">100</span></p> 
+        </div>
+        <hr>
+
+        <!-- 좀더 둥근모양 뱃지[ badge ]  :  .badge-pill -->
+        <!-- pill(알약) : 알약모양으로 만드는 스타일 -->
+        <div class="container">
+            <h1>Example heading <span class="badge badge-primary badge-pill">New</span></h1>
+            <h2>Example heading <span class="badge badge-secondary badge-pill">New</span></h2>
+            <h3>Example heading <span class="badge badge-success badge-pill">New</span></h3>
+            <h4>Example heading <span class="badge badge-info badge-pill">New</span></h4>
+            <h5>Example heading <span class="badge badge-warning badge-pill">New</span></h5>
+            <h6>Example heading <span class="badge badge-danger badge-pill">New</span></h6>
+            <p>Expmaple paragraph <span class="badge badge-light badge-pill">1</span></p> 
+            <p>Expmaple paragraph <span class="badge badge-dark badge-pill">100</span></p> 
+        </div>
+        <hr>
+
+        <!-- 버튼같은 엘리먼트 안에 뱃지 삽입하기 -->
+        <div class="container">
+            <button class="btn btn-primary">BUTTON <span class="badge badge-light">10</span>  </button>
+        </div>
+        <hr>
+
+
+    </body>
+
+</html>

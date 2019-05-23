@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Spinner style</title>
+
+        <!-- w3schools사이트 BOOTSTRAP튜토리얼에서 링크 복사 -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    </head>
+
+    <body>
+
+        <!-- Spinner : 원형 진행표시 -->
+        <div class="container mt-5">
+            <!-- 기본 스피너 [ .spinner-border ] -->
+            <div class="spinner-border"></div>           
+
+            <!-- 여러색상 스피너들 [ .text-XXXX ] -->
+            <div class="spinner-border text-primary"></div>
+            <div class="spinner-border text-secondary"></div>
+            <div class="spinner-border text-success"></div>
+            <div class="spinner-border text-info"></div>
+            <div class="spinner-border text-warning"></div>
+            <div class="spinner-border text-danger"></div>
+            <div class="spinner-border text-dark"></div>
+            <div class="spinner-border text-light"></div>
+            <div class="spinner-border text-mute"></div>
+        </div>
+        <hr>
+
+        <!-- 원이 점점 커지는 모양의 스피너 [ .spinner-grow ]-->
+        <div class="container mt-5">
+            <div class="spinner-grow text-primary"></div>
+            <div class="spinner-grow text-secondary"></div>
+            <div class="spinner-grow text-success"></div>
+            <div class="spinner-grow text-info"></div>
+            <div class="spinner-grow text-warning"></div>
+            <div class="spinner-grow text-danger"></div>
+            <div class="spinner-grow text-dark"></div>
+            <div class="spinner-grow text-light"></div>
+            <div class="spinner-grow text-mute"></div>
+        </div>
+        <hr>
+
+        <!-- 작은 사이즈의 스피너 가능 [ .spinner-border-sm or .spinner-grow-sm : small만 있음. lg없음] -->
+        <div class="container mt-5">
+            <div class="spinner-border text-primary spinner-border-sm"></div>
+            <div class="spinner-grow text-success spinner-grow-sm"></div>
+        </div>
+        <hr>
+
+        <!-- 버튼 안에 있는 스피너 -->
+        <div class="container mt-5">
+            <!-- 스피너만 있는 버튼 -->
+            <button class="btn btn-primary"><span class="spinner-border"></span></button>
+
+            <!-- 글씨와 스피너가 함께 있는 버튼 -->
+            <button class="btn btn-primary"><span class="spinner-border"></span> Loading....</button>
+
+            <!-- 사이즈가 맞지 않아 이쁘지 않음. 버튼에 있는 스피너는 작은 크기를 권장 -->
+            <!-- 스피너만 있는 버튼 -->
+            <button class="btn btn-primary"><span class="spinner-border spinner-border-sm"></span></button>
+
+            <!-- 글씨와 스피너가 함께 있는 버튼 -->
+            <button class="btn btn-primary"><span class="spinner-border spinner-border-sm"></span> Loading....</button>
+
+            <!-- 스피너가 돌때 함께 도는 글씨 버튼 : 이상함 -->
+            <button class="btn btn-primary"><span class="spinner-border spinner-border-sm">A</span></button>
+
+            <!-- 로딩중 버튼사용 못하도록 하는 disabled -->
+            <button class="btn btn-primary" disabled><span class="spinner-border spinner-border-sm"></span> Loading....</button>
+
+            <!-- 스피너를 grow형태로.. -->
+            <button class="btn btn-primary" disabled><span class="spinner-grow spinner-grow-sm"></span> Loading....</button>
+
+            <!-- 스피너 색상지정도 가능함 -->
+            <button class="btn btn-primary" disabled><span class="spinner-grow spinner-grow-sm text-danger"></span> Loading....</button>
+            <!-- 버튼 글씨 색상도..역시 가능 -->
+            <button class="btn btn-primary text-warning" disabled><span class="spinner-grow spinner-grow-sm text-warning"></span> Loading....</button>
+
+        </div>
+        <hr>
+
+
+
+    </body>
+
+</html>
